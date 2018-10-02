@@ -1,0 +1,56 @@
+#topo{
+	margin-top: 2em;
+	.container{
+		@include display(flex);
+		@include flex-direction(column);
+		@include align-items(center);
+	}
+	h1{
+		margin: 0;
+		width: 70%;
+		@media screen{
+			@media (max-width: $tamanho-gigante){
+				width: 50%;
+			}
+
+			@media (max-width: $tamanho-notebook){
+				width: 60%;
+			}
+
+			@media (max-width: $tamanho-tablet){
+				width: 70%;
+			}
+
+			@media (max-width: $tamanho-smartphone){
+				width: 100%;
+			}
+		}
+		a{
+			display: block;
+			width: 100%;
+		}
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	h2{
+		margin: 0;
+		text-align: center;
+		font-weight: normal;
+		font-size: 1em;
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			height: 65%;
+			width: calc(100% + 2em);
+			left: -1em;
+			top: -3px;
+			z-index: -1;
+			background-color: $amarelo;
+		}
+	}
+}

@@ -1,0 +1,456 @@
+/*--------------------------------
+
+afcicons Web Font
+Generated using nucleoapp.com
+
+-------------------------------- */
+@font-face {
+  font-family: 'afcicons';
+  src: url('../../fonts/afcicons.eot');
+  src: url('../../fonts/afcicons.eot') format('embedded-opentype'), url('../../fonts/afcicons.woff2') format('woff2'), url('../../fonts/afcicons.woff') format('woff'), url('../../fonts/afcicons.ttf') format('truetype'), url('../../fonts/afcicons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  color: #333333;
+  background: white;
+}
+
+a {
+  color: #608CEE;
+  text-decoration: none;
+}
+
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+header {
+  text-align: center;
+  padding: 80px 0 48px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+}
+
+header p {
+  font-size: 1.4rem;
+  margin-top: 1em;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul li {
+  border-radius: .25em;
+  transition: background 0.2s;
+  user-select: none;
+  overflow: hidden;
+  text-align: center;
+  padding: 1em;
+}
+
+ul li:hover {
+  background: #f8f8f8;
+}
+
+ul p, ul em, ul input {
+  display: block;
+  font-size: 1.1rem;
+  color: rgba(0,0,0,0.6);
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  max-width: 11rem;
+}
+
+ul p {
+  padding: 10px 0;
+}
+
+ul p::selection, ul em::selection {
+  background: #608CEE;
+  color: #fff;
+}
+
+ul p::-moz-selection, ul em::-moz-selection {
+  background: #608CEE;
+  color: #fff;
+}
+
+ul em {
+  margin-bottom: 8px;
+}
+
+ul em::before {
+  content: '[';
+}
+ul em::after {
+  content: ']';
+}
+
+ul input {
+  text-align: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+/* --------------------------------
+
+icons
+
+-------------------------------- */
+.afico {
+  display: inline-block;
+  font: normal normal normal 32px/1 'afcicons';
+  speak: none;
+  text-transform: none;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*------------------------
+  font icons
+-------------------------*/
+
+.afico-angle-double-down::before {
+    content: "\ea02";
+}
+
+.afico-angle-double-left::before {
+    content: "\ea03";
+}
+
+.afico-angle-double-right::before {
+    content: "\ea04";
+}
+
+.afico-angle-double-up::before {
+    content: "\ea05";
+}
+
+.afico-angle-down::before {
+    content: "\ea06";
+}
+
+.afico-angle-left::before {
+    content: "\ea07";
+}
+
+.afico-angle-right::before {
+    content: "\ea08";
+}
+
+.afico-angle-up::before {
+    content: "\ea09";
+}
+
+.afico-bars::before {
+    content: "\ea0a";
+}
+
+.afico-behance::before {
+    content: "\ea0b";
+}
+
+.afico-bookmark-o::before {
+    content: "\ea0c";
+}
+
+.afico-bookmark::before {
+    content: "\ea0d";
+}
+
+.afico-bullhorn::before {
+    content: "\ea0e";
+}
+
+.afico-calendar-o::before {
+    content: "\ea0f";
+}
+
+.afico-calendar::before {
+    content: "\ea10";
+}
+
+.afico-check-square-o::before {
+    content: "\ea11";
+}
+
+.afico-chevron-down::before {
+    content: "\ea12";
+}
+
+.afico-chevron-left::before {
+    content: "\ea13";
+}
+
+.afico-chevron-right::before {
+    content: "\ea14";
+}
+
+.afico-chevron-up::before {
+    content: "\ea15";
+}
+
+.afico-diamond::before {
+    content: "\ea16";
+}
+
+.afico-dribbble::before {
+    content: "\ea17";
+}
+
+.afico-dropbox::before {
+    content: "\ea18";
+}
+
+.afico-envelope-o::before {
+    content: "\ea19";
+}
+
+.afico-envelope::before {
+    content: "\ea1a";
+}
+
+.afico-etsy::before {
+    content: "\ea1b";
+}
+
+.afico-gift::before {
+    content: "\ea1c";
+}
+
+.afico-google-plus::before {
+    content: "\ea1d";
+}
+
+.afico-heart-o::before {
+    content: "\ea1e";
+}
+
+.afico-heart::before {
+    content: "\ea1f";
+}
+
+.afico-instagram::before {
+    content: "\ea20";
+}
+
+.afico-link::before {
+    content: "\ea21";
+}
+
+.afico-linkedin::before {
+    content: "\ea22";
+}
+
+.afico-list-ul::before {
+    content: "\ea23";
+}
+
+.afico-list::before {
+    content: "\ea24";
+}
+
+.afico-location-arrow::before {
+    content: "\ea25";
+}
+
+.afico-lock::before {
+    content: "\ea26";
+}
+
+.afico-long-arrow-down::before {
+    content: "\ea27";
+}
+
+.afico-long-arrow-left::before {
+    content: "\ea28";
+}
+
+.afico-long-arrow-right::before {
+    content: "\ea29";
+}
+
+.afico-long-arrow-up::before {
+    content: "\ea2a";
+}
+
+.afico-map-marker::before {
+    content: "\ea2b";
+}
+
+.afico-map-signs::before {
+    content: "\ea2c";
+}
+
+.afico-paypal::before {
+    content: "\ea2d";
+}
+
+.afico-pencil-square-o::before {
+    content: "\ea2e";
+}
+
+.afico-pinterest-p::before {
+    content: "\ea2f";
+}
+
+.afico-plane::before {
+    content: "\ea30";
+}
+
+.afico-plus::before {
+    content: "\ea31";
+}
+
+.afico-quote-left::before {
+    content: "\ea32";
+}
+
+.afico-quote-right::before {
+    content: "\ea33";
+}
+
+.afico-rss::before {
+    content: "\ea34";
+}
+
+.afico-search::before {
+    content: "\ea35";
+}
+
+.afico-send-o::before {
+    content: "\ea36";
+}
+
+.afico-share-alt::before {
+    content: "\ea37";
+}
+
+.afico-shopping-bag::before {
+    content: "\ea38";
+}
+
+.afico-shopping-basket::before {
+    content: "\ea39";
+}
+
+.afico-shopping-cart::before {
+    content: "\ea3a";
+}
+
+.afico-sign-in::before {
+    content: "\ea3b";
+}
+
+.afico-sign-out::before {
+    content: "\ea3c";
+}
+
+.afico-skype::before {
+    content: "\ea3d";
+}
+
+.afico-snapchat-ghost::before {
+    content: "\ea3e";
+}
+
+.afico-snowflake-o::before {
+    content: "\ea3f";
+}
+
+.afico-soundcloud::before {
+    content: "\ea40";
+}
+
+.afico-spotify::before {
+    content: "\ea41";
+}
+
+.afico-square-o::before {
+    content: "\ea42";
+}
+
+.afico-square::before {
+    content: "\ea43";
+}
+
+.afico-star-half-empty::before {
+    content: "\ea44";
+}
+
+.afico-star-o::before {
+    content: "\ea45";
+}
+
+.afico-star::before {
+    content: "\ea46";
+}
+
+.afico-times-circle::before {
+    content: "\ea47";
+}
+
+.afico-tumblr::before {
+    content: "\ea48";
+}
+
+.afico-twitter::before {
+    content: "\ea49";
+}
+
+.afico-user-plus::before {
+    content: "\ea4a";
+}
+
+.afico-vimeo::before {
+    content: "\ea4b";
+}
+
+.afico-whatsapp::before {
+    content: "\ea4c";
+}
+
+.afico-wordpress::before {
+    content: "\ea4d";
+}
+
+.afico-youtube-play::before {
+    content: "\ea4e";
+}
+

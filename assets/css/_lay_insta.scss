@@ -1,0 +1,50 @@
+#widget-instagram{
+	width: 100%;
+	margin-top: 2.5em;
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		@include display(flex);
+		li{
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			width: percentage(100/12);
+			margin: 0;
+			@media screen{
+				@media (max-width: $tamanho-gigante){
+					width: percentage(100/9);
+					&:nth-child(n+10){
+						display: none;
+					}
+				}
+
+				@media (max-width: $tamanho-tablet){
+					width: percentage(100/6);
+					&:nth-child(n+7){
+						display: none;
+					}
+				}
+
+				@media (max-width: $tamanho-smart-pequeno){
+					width: percentage(100/4);
+					&:nth-child(n+5){
+						display: none;
+					}
+				}
+			}
+
+			a{
+				display: block;
+				img{
+					display: block;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+	
+
+}

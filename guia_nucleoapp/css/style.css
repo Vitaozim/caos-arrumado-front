@@ -1,0 +1,464 @@
+/*--------------------------------
+
+afcicons Web Font
+Generated using nucleoapp.com
+
+-------------------------------- */
+@font-face {
+  font-family: 'afcicons';
+  src: url('../fonts/afcicons.eot');
+  src: url('../fonts/afcicons.eot') format('embedded-opentype'), url('../fonts/afcicons.woff2') format('woff2'), url('../fonts/afcicons.woff') format('woff'), url('../fonts/afcicons.ttf') format('truetype'), url('../fonts/afcicons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*------------------------
+	base class definition
+-------------------------*/
+.afico {
+  display: inline-block;
+  font: normal normal normal 1em/1 'afcicons';
+  speak: none;
+  text-transform: none;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*------------------------
+  change icon size
+-------------------------*/
+/* relative units */
+.afico-sm {
+  font-size: 0.8em;
+}
+.afico-lg {
+  font-size: 1.2em;
+}
+/* absolute units */
+.afico-16 {
+  font-size: 16px;
+}
+.afico-32 {
+  font-size: 32px;
+}
+/*----------------------------------
+  add a square/circle background
+-----------------------------------*/
+.afico-bg-square,
+.afico-bg-circle {
+  padding: 0.35em;
+  background-color: #eee;
+}
+.afico-bg-circle {
+  border-radius: 50%;
+}
+/*------------------------------------
+  use icons as list item markers
+-------------------------------------*/
+.afico-ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+.afico-ul > li {
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+.afico-ul > li > .afico {
+  margin-right: 0.4em;
+  line-height: inherit;
+}
+/*------------------------
+  spinning icons
+-------------------------*/
+.afico-is-spinning {
+  -webkit-animation: afico-spin 2s infinite linear;
+  -moz-animation: afico-spin 2s infinite linear;
+  animation: afico-spin 2s infinite linear;
+}
+@-webkit-keyframes afico-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes afico-spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes afico-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/*------------------------
+  rotated/flipped icons
+-------------------------*/
+.afico-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.afico-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.afico-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.afico-flip-y {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.afico-flip-x {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+/*------------------------
+	icons
+-------------------------*/
+
+.afico-angle-double-down::before {
+  content: "\ea02";
+}
+
+.afico-angle-double-left::before {
+  content: "\ea03";
+}
+
+.afico-angle-double-right::before {
+  content: "\ea04";
+}
+
+.afico-angle-double-up::before {
+  content: "\ea05";
+}
+
+.afico-angle-down::before {
+  content: "\ea06";
+}
+
+.afico-angle-left::before {
+  content: "\ea07";
+}
+
+.afico-angle-right::before {
+  content: "\ea08";
+}
+
+.afico-angle-up::before {
+  content: "\ea09";
+}
+
+.afico-bars::before {
+  content: "\ea0a";
+}
+
+.afico-behance::before {
+  content: "\ea0b";
+}
+
+.afico-bookmark-o::before {
+  content: "\ea0c";
+}
+
+.afico-bookmark::before {
+  content: "\ea0d";
+}
+
+.afico-bullhorn::before {
+  content: "\ea0e";
+}
+
+.afico-calendar-o::before {
+  content: "\ea0f";
+}
+
+.afico-calendar::before {
+  content: "\ea10";
+}
+
+.afico-check-square-o::before {
+  content: "\ea11";
+}
+
+.afico-chevron-down::before {
+  content: "\ea12";
+}
+
+.afico-chevron-left::before {
+  content: "\ea13";
+}
+
+.afico-chevron-right::before {
+  content: "\ea14";
+}
+
+.afico-chevron-up::before {
+  content: "\ea15";
+}
+
+.afico-diamond::before {
+  content: "\ea16";
+}
+
+.afico-dribbble::before {
+  content: "\ea17";
+}
+
+.afico-dropbox::before {
+  content: "\ea18";
+}
+
+.afico-envelope-o::before {
+  content: "\ea19";
+}
+
+.afico-envelope::before {
+  content: "\ea1a";
+}
+
+.afico-etsy::before {
+  content: "\ea1b";
+}
+
+.afico-gift::before {
+  content: "\ea1c";
+}
+
+.afico-google-plus::before {
+  content: "\ea1d";
+}
+
+.afico-heart-o::before {
+  content: "\ea1e";
+}
+
+.afico-heart::before {
+  content: "\ea1f";
+}
+
+.afico-instagram::before {
+  content: "\ea20";
+}
+
+.afico-link::before {
+  content: "\ea21";
+}
+
+.afico-linkedin::before {
+  content: "\ea22";
+}
+
+.afico-list-ul::before {
+  content: "\ea23";
+}
+
+.afico-list::before {
+  content: "\ea24";
+}
+
+.afico-location-arrow::before {
+  content: "\ea25";
+}
+
+.afico-lock::before {
+  content: "\ea26";
+}
+
+.afico-long-arrow-down::before {
+  content: "\ea27";
+}
+
+.afico-long-arrow-left::before {
+  content: "\ea28";
+}
+
+.afico-long-arrow-right::before {
+  content: "\ea29";
+}
+
+.afico-long-arrow-up::before {
+  content: "\ea2a";
+}
+
+.afico-map-marker::before {
+  content: "\ea2b";
+}
+
+.afico-map-signs::before {
+  content: "\ea2c";
+}
+
+.afico-paypal::before {
+  content: "\ea2d";
+}
+
+.afico-pencil-square-o::before {
+  content: "\ea2e";
+}
+
+.afico-pinterest-p::before {
+  content: "\ea2f";
+}
+
+.afico-plane::before {
+  content: "\ea30";
+}
+
+.afico-plus::before {
+  content: "\ea31";
+}
+
+.afico-quote-left::before {
+  content: "\ea32";
+}
+
+.afico-quote-right::before {
+  content: "\ea33";
+}
+
+.afico-rss::before {
+  content: "\ea34";
+}
+
+.afico-search::before {
+  content: "\ea35";
+}
+
+.afico-send-o::before {
+  content: "\ea36";
+}
+
+.afico-share-alt::before {
+  content: "\ea37";
+}
+
+.afico-shopping-bag::before {
+  content: "\ea38";
+}
+
+.afico-shopping-basket::before {
+  content: "\ea39";
+}
+
+.afico-shopping-cart::before {
+  content: "\ea3a";
+}
+
+.afico-sign-in::before {
+  content: "\ea3b";
+}
+
+.afico-sign-out::before {
+  content: "\ea3c";
+}
+
+.afico-skype::before {
+  content: "\ea3d";
+}
+
+.afico-snapchat-ghost::before {
+  content: "\ea3e";
+}
+
+.afico-snowflake-o::before {
+  content: "\ea3f";
+}
+
+.afico-soundcloud::before {
+  content: "\ea40";
+}
+
+.afico-spotify::before {
+  content: "\ea41";
+}
+
+.afico-square-o::before {
+  content: "\ea42";
+}
+
+.afico-square::before {
+  content: "\ea43";
+}
+
+.afico-star-half-empty::before {
+  content: "\ea44";
+}
+
+.afico-star-o::before {
+  content: "\ea45";
+}
+
+.afico-star::before {
+  content: "\ea46";
+}
+
+.afico-times-circle::before {
+  content: "\ea47";
+}
+
+.afico-tumblr::before {
+  content: "\ea48";
+}
+
+.afico-twitter::before {
+  content: "\ea49";
+}
+
+.afico-user-plus::before {
+  content: "\ea4a";
+}
+
+.afico-vimeo::before {
+  content: "\ea4b";
+}
+
+.afico-whatsapp::before {
+  content: "\ea4c";
+}
+
+.afico-wordpress::before {
+  content: "\ea4d";
+}
+
+.afico-youtube-play::before {
+  content: "\ea4e";
+}
+

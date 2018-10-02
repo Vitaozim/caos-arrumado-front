@@ -1,0 +1,136 @@
+#slider-principal{
+	margin-top: 2em;
+	@extend .container;
+	position: relative;
+	overflow: visible;
+	section{
+		overflow: hidden;
+		height: 1120px*0.75*0.55;
+		display: none;
+		&:nth-child(3){
+			display: block;
+		}
+
+		& >{
+			h2{
+				margin: 0;
+				margin-top: 1em;
+				width: 50%;
+				color: white;
+				font-weight: normal;
+				font-size: 1.5em;
+				padding: 0.3em; 
+				@include linear-gradient(to right, $rosa, $amarelo);
+				position: relative;
+				z-index: 2;
+			}
+
+			p{
+				margin: 0;
+				margin-top: 0.5em;
+				width: 25%;
+				font-style: italic;
+				padding-right: 0.5rem;
+			}
+
+			a{
+				margin-top: 0.5em;
+				text-decoration: none;
+				padding-right: 0.5rem;
+				display: block;
+				width: 25%;
+				text-align: right;
+				font-family: $fonte-titulo;
+				color: $rosa;
+				font-size: 1.3em;
+			}
+
+			div{
+				position: absolute;
+				z-index: 1;
+				right: 0;
+				top: 0;
+				width: 75%;
+				height: 100%;
+				overflow: hidden;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				img{
+					display: block;
+					opacity: 0;
+					height: 0px;
+					width: 0px;
+				}
+			}
+		}
+	}
+
+	nav.bullets{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 25%;
+		padding: 0 1em;
+		@include display(flex);
+		@include justify-content(center);
+		button{
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: $amarelo;
+			@include transition(background-color 0.2s linear);
+			&.ativo, &:hover{
+				background-color: $rosa;
+			}
+			margin-right: 5px;
+			&:last-child{
+				margin-right: 0;
+			}
+
+		}
+	}
+
+	nav.next-prev{
+		position: absolute;
+		bottom: -26px;
+		right: -20px;
+		z-index: 2;
+		width: 120px;
+		height: 84px;
+		background-image: url(../media/triangulo-preto-slider.svg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		@include display(flex);
+
+		button{
+			position: absolute;
+			font-size: 2.5em;
+			color: $amarelo;
+			@include transition(color 0.2s linear);
+			&:before{
+				line-height: 1;
+			}
+			&:hover{
+				color: $rosa;
+			}
+			&.prev{
+				top: 14%;
+				left: 36%;
+			}
+
+			&.next{
+				top: 30%;
+				left: 54%;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

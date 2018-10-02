@@ -1,0 +1,34 @@
+$output-bourbon-deprecation-warnings: false !default;
+
+@charset "UTF-8";
+
+@import 'bourbon/bourbon';
+@import 'normalize';
+@import 'fontface';
+@import 'afcicons';
+@import 'padroes';
+
+@import 'lay_menuglobal';
+@import 'lay_insta';
+@import 'lay_cabecalho';
+@import 'lay_slider';
+@import 'lay_ultimosposts';
+@import 'lay_lateral';
+@import 'lay_footer';
+
+
+
+main{
+	width: 100%;
+	.posts-e-lateral{
+		margin-top: 10em;
+		@include display(flex);
+		@include justify-content(space-between);
+	}
+}
+body{
+	overflow-x: hidden;
+	background-image: url(../media/caosarrumado-bg.svg);
+	background-size: 100% 1000px;
+	background-repeat: no-repeat;
+}
