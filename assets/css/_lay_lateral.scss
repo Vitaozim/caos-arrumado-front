@@ -4,6 +4,35 @@
 		font-size: 0.9em;
 		width: 100%;
 		margin-bottom: 2em;
+		.titulo-aside{
+			position: relative;
+			@include display(flex);
+			@include justify-content(center);
+			h2{
+				padding: 0.4em;
+				background-color: #fff;
+				font-size: 2em;
+				font-weight: normal;
+				font-family: $fonte-titulo;
+				color: $rosa;
+				margin: 0;
+			}
+			&:before{
+				content: '';
+				position: absolute;
+				z-index: -1;
+				display: block;
+				width: 100%;
+				left: 0; top: 50%;
+				border-bottom: 3px solid $amarelo;
+				@include transform(rotate(2deg));
+			}
+		}
+
+		&:nth-of-type(even) .titulo-aside:before{
+			@include transform(rotate(-2deg));				
+		}
+
 		&.perfil{
 			.foto-e-bemvindo{
 				width: 100%;
@@ -190,6 +219,163 @@
 					span{
 						color: $rosa;
 						font-size: 2em;
+					}
+				}
+			}
+		}
+
+		&.mais-vistos{
+			ul{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				li{
+					margin: 0;
+					margin-bottom: 1em;
+					counter-increment: maisvistos;
+
+					&:nth-child(even){
+						a{
+							@include flex-direction(row-reverse);
+
+							div.img{
+								&:after{
+									right: auto;
+									left: 0;
+									@include transform(translate(-50%, -50%));
+
+								}
+							}
+
+							h3{
+								text-align: right;
+								margin: 0 1em 0 0;
+								@supports(-webkit-background-clip: text) and (-webkit-text-fill-color: transparent){
+									@include linear-gradient(to right, $rosa, $amarelo);
+								}
+							}
+						}
+					}
+					a{
+						text-decoration: none;
+						@include display(flex);
+						@include align-items(center);
+
+						&:hover{
+							div.img{
+								&:after{
+									background-color: $amarelo;
+								}
+							}
+						}
+						
+
+						div.img{
+							position: relative;
+							display: block;
+							background-size: cover;
+							background-position: center;
+							width: 30%;
+							height: 80px;
+							@include flex-shrink(0);
+							img{
+								position: absolute;
+								height: 0;
+								width: 0;
+								opacity: 0;
+								right: 0;
+								top: 0;
+							}
+
+							&:after{
+								content: counter(maisvistos);
+								line-height: 1;
+								@include display(flex);
+								@include justify-content(center);
+								@include align-items(center);
+								width: 1.5em;
+								height: 1.5em;
+								border-radius: 50%;
+								position: absolute;
+								z-index: 2;
+								right: 0;
+								top: 50%;
+								@include transform(translate(50%, -50%));
+								font-weight: bold;
+								color: white;
+								background-color: $rosa;
+								@include transition(background-color 0.2s linear);
+							}
+						}
+						h3{
+							font-size: 1em;
+							font-weight: normal;
+							margin: 0 0 0 1em;
+							color: $rosa;
+							@supports(-webkit-background-clip: text) and (-webkit-text-fill-color: transparent){
+								@include linear-gradient(to right, $amarelo, $rosa);
+								-webkit-background-clip: text;
+								-webkit-text-fill-color: transparent;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.pinterest{
+			ul{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				$gutter: 8px;
+				div.gutter-sizer{
+					width: $gutter;
+				}
+
+				div.grid-sizer{
+					width: calc(33.33333% - #{$gutter});
+				}
+				li.grid-item{
+					width: calc(33.33333% - #{$gutter});
+					margin-bottom: $gutter;
+					a{
+						display: block;
+						img{
+							display: block;
+							width: 100%;
+							height: auto;
+						}
+					}
+				}
+			}
+		}
+
+		&.viagens{
+			.container-mapa{
+				position: relative;
+				img{
+					display: block;
+					width: 100%;
+					height: auto;
+				}
+
+				h3{
+					position: absolute;
+					z-index: 2;
+					top: 20%;
+					right: 0;
+					font-size: 1.5em;
+					font-weight: normal;
+					line-height: 1;
+					$color: $fonte-corpo;
+					font-style: italic;
+					text-align: center;
+					span{
+						display: block;
+						font-size: 2em;
+						font-family: $fonte-titulo;
+						color: $rosa;
 					}
 				}
 			}

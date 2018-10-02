@@ -1349,6 +1349,52 @@ h1, h2, h3, h4, h5 {
     font-size: 0.9em;
     width: 100%;
     margin-bottom: 2em; }
+    #lateral aside .titulo-aside {
+      position: relative;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center; }
+      #lateral aside .titulo-aside h2 {
+        padding: 0.4em;
+        background-color: #fff;
+        font-size: 2em;
+        font-weight: normal;
+        font-family: "Nickainley", cursive, sans-serif;
+        color: #E96576;
+        margin: 0; }
+      #lateral aside .titulo-aside:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        border-bottom: 3px solid #F4CC8B;
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+        -o-transform: rotate(2deg);
+        transform: rotate(2deg); }
+    #lateral aside:nth-of-type(even) .titulo-aside:before {
+      -webkit-transform: rotate(-2deg);
+      -moz-transform: rotate(-2deg);
+      -ms-transform: rotate(-2deg);
+      -o-transform: rotate(-2deg);
+      transform: rotate(-2deg); }
     #lateral aside.perfil .foto-e-bemvindo {
       width: 100%;
       position: relative;
@@ -1563,6 +1609,174 @@ h1, h2, h3, h4, h5 {
         #lateral aside.procurar form.field-procurar button span {
           color: #E96576;
           font-size: 2em; }
+    #lateral aside.mais-vistos ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      #lateral aside.mais-vistos ul li {
+        margin: 0;
+        margin-bottom: 1em;
+        counter-increment: maisvistos; }
+        #lateral aside.mais-vistos ul li:nth-child(even) a {
+          -webkit-box-orient: horizontal;
+          -moz-box-orient: horizontal;
+          box-orient: horizontal;
+          -webkit-box-direction: reverse;
+          -moz-box-direction: reverse;
+          box-direction: reverse;
+          -webkit-flex-direction: row-reverse;
+          -moz-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+          -ms-flex-direction: row-reverse; }
+          #lateral aside.mais-vistos ul li:nth-child(even) a div.img:after {
+            right: auto;
+            left: 0;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+          #lateral aside.mais-vistos ul li:nth-child(even) a h3 {
+            text-align: right;
+            margin: 0 1em 0 0; }
+            @supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+              #lateral aside.mais-vistos ul li:nth-child(even) a h3 {
+                background-color: #E96576;
+                background-image: -webkit-linear-gradient(left, #E96576, #F4CC8B);
+                background-image: linear-gradient(to right,#E96576, #F4CC8B); } }
+        #lateral aside.mais-vistos ul li a {
+          text-decoration: none;
+          display: -webkit-box;
+          display: -moz-box;
+          display: box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -moz-box-align: center;
+          box-align: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          -ms-align-items: center;
+          -o-align-items: center;
+          align-items: center;
+          -ms-flex-align: center; }
+          #lateral aside.mais-vistos ul li a:hover div.img:after {
+            background-color: #F4CC8B; }
+          #lateral aside.mais-vistos ul li a div.img {
+            position: relative;
+            display: block;
+            background-size: cover;
+            background-position: center;
+            width: 30%;
+            height: 80px;
+            -webkit-flex-shrink: 0;
+            -moz-flex-shrink: 0;
+            flex-shrink: 0;
+            -ms-flex-negative: 0; }
+            #lateral aside.mais-vistos ul li a div.img img {
+              position: absolute;
+              height: 0;
+              width: 0;
+              opacity: 0;
+              right: 0;
+              top: 0; }
+            #lateral aside.mais-vistos ul li a div.img:after {
+              content: counter(maisvistos);
+              line-height: 1;
+              display: -webkit-box;
+              display: -moz-box;
+              display: box;
+              display: -webkit-flex;
+              display: -moz-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-pack: center;
+              -moz-box-pack: center;
+              box-pack: center;
+              -webkit-justify-content: center;
+              -moz-justify-content: center;
+              -ms-justify-content: center;
+              -o-justify-content: center;
+              justify-content: center;
+              -ms-flex-pack: center;
+              -webkit-box-align: center;
+              -moz-box-align: center;
+              box-align: center;
+              -webkit-align-items: center;
+              -moz-align-items: center;
+              -ms-align-items: center;
+              -o-align-items: center;
+              align-items: center;
+              -ms-flex-align: center;
+              width: 1.5em;
+              height: 1.5em;
+              border-radius: 50%;
+              position: absolute;
+              z-index: 2;
+              right: 0;
+              top: 50%;
+              -webkit-transform: translate(50%, -50%);
+              -moz-transform: translate(50%, -50%);
+              -ms-transform: translate(50%, -50%);
+              -o-transform: translate(50%, -50%);
+              transform: translate(50%, -50%);
+              font-weight: bold;
+              color: white;
+              background-color: #E96576;
+              -webkit-transition: background-color 0.2s linear;
+              -moz-transition: background-color 0.2s linear;
+              transition: background-color 0.2s linear; }
+          #lateral aside.mais-vistos ul li a h3 {
+            font-size: 1em;
+            font-weight: normal;
+            margin: 0 0 0 1em;
+            color: #E96576; }
+            @supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+              #lateral aside.mais-vistos ul li a h3 {
+                background-color: #F4CC8B;
+                background-image: -webkit-linear-gradient(left, #F4CC8B, #E96576);
+                background-image: linear-gradient(to right,#F4CC8B, #E96576);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent; } }
+    #lateral aside.pinterest ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      #lateral aside.pinterest ul div.gutter-sizer {
+        width: 8px; }
+      #lateral aside.pinterest ul div.grid-sizer {
+        width: calc(33.33333% - 8px); }
+      #lateral aside.pinterest ul li.grid-item {
+        width: calc(33.33333% - 8px);
+        margin-bottom: 8px; }
+        #lateral aside.pinterest ul li.grid-item a {
+          display: block; }
+          #lateral aside.pinterest ul li.grid-item a img {
+            display: block;
+            width: 100%;
+            height: auto; }
+    #lateral aside.viagens .container-mapa {
+      position: relative; }
+      #lateral aside.viagens .container-mapa img {
+        display: block;
+        width: 100%;
+        height: auto; }
+      #lateral aside.viagens .container-mapa h3 {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        font-size: 1.5em;
+        font-weight: normal;
+        line-height: 1;
+        font-style: italic;
+        text-align: center; }
+        #lateral aside.viagens .container-mapa h3 span {
+          display: block;
+          font-size: 2em;
+          font-family: "Nickainley", cursive, sans-serif;
+          color: #E96576; }
 
 main {
   width: 100%; }
