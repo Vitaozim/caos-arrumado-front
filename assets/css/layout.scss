@@ -8,6 +8,7 @@ $output-bourbon-deprecation-warnings: false !default;
 @import 'afcicons';
 @import 'padroes';
 
+@import 'lay_components';
 @import 'lay_menuglobal';
 @import 'lay_insta';
 @import 'lay_cabecalho';
@@ -21,9 +22,10 @@ $output-bourbon-deprecation-warnings: false !default;
 main{
 	width: 100%;
 	.posts-e-lateral{
-		margin-top: 10em;
+		margin-top: 7em;
 		@include display(flex);
 		@include justify-content(space-between);
+		
 	}
 }
 body{

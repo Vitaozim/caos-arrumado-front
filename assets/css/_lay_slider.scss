@@ -1,18 +1,78 @@
 #slider-principal{
-	margin-top: 2em;
+	margin-top: 3em;
 	@extend .container;
-	position: relative;
 	overflow: visible;
+	position: relative;
+
+	.container-slides{
+		overflow: visible;
+		position: relative;
+		width: 100%;
+	}
 	section{
+		width: 100%;
 		overflow: hidden;
-		height: 1120px*0.75*0.55;
 		display: none;
-		&:nth-child(3){
+		height: 1120px*0.75*0.6;
+		@media (max-width: $tamanho-notebook){
+			height: calc(100vw * 0.75 * 0.6);
+		}
+		
+		&.db{
 			display: block;
 		}
 
-		& >{
+		&.before-atual >{
 			h2{
+				@include transform(translateX(-100%));
+				opacity: 0;
+			}
+
+			div.imagem{
+				@include transform(translateX(100%));
+				opacity: 0;
+			}
+			p,a{
+				opacity: 0;
+			}
+
+		}
+
+		&.atual >{
+			h2,div.imagem,p,a{
+				@include transition(all 0.3s ease-out);
+				@include transition-property(opacity, transform);
+				opacity: 1;
+			}
+
+			h2,div.imagem{
+				@include transform(translateX(0%));
+			}
+		}
+
+		&.deixando-atual >{
+			h2,div.imagem,p,a{
+				@include transition(all 0.3s ease-in);
+				opacity: 0;
+			}
+
+			h2{
+				@include transform(translateX(100%));
+			}
+
+			div.imagem{
+				@include transform(translateX(-100%));
+			}
+		}
+
+		& >{
+			h2,div.imagem,p,a{
+				@include transition-property(opacity, transform);
+			}
+
+
+			h2{
+				
 				margin: 0;
 				margin-top: 1em;
 				width: 50%;
@@ -45,7 +105,7 @@
 				font-size: 1.3em;
 			}
 
-			div{
+			div.imagem{
 				position: absolute;
 				z-index: 1;
 				right: 0;
@@ -80,7 +140,7 @@
 			border-radius: 50%;
 			background-color: $amarelo;
 			@include transition(background-color 0.2s linear);
-			&.ativo, &:hover{
+			&.atual, &:hover{
 				background-color: $rosa;
 			}
 			margin-right: 5px;

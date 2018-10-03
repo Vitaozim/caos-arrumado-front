@@ -1,0 +1,40 @@
+#rodape-e-mapa{
+	margin-top: 7em;
+	background-image: url(../media/caosarrumado-bg2.svg);
+	#mapa-mundi{
+		margin-bottom: 2em;
+		.mapa-interativo{
+			font-size: 0.9em;
+			@extend .container;
+			img.aviao{
+				position: absolute;
+				z-index: 2;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+
+	#rodape{
+		height: 3em;
+		background-color: $preto;
+		& > .container{
+			height: 100%;
+			@include display(flex);
+			@include justify-content(space-between);
+			@include align-items(center);
+			p{
+				font-size: 0.8em;
+				text-transform: uppercase;
+				color: $amarelo;
+				line-height: 1;
+				img{
+					vertical-align: middle;
+					height: 1.5em;
+					width: auto;
+				}
+			}
+		}
+	}
+
+}

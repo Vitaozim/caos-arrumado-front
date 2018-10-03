@@ -1,5 +1,6 @@
 #lateral{
 	width: 300px;
+	@include flex-shrink(0);
 	aside{
 		font-size: 0.9em;
 		width: 100%;
@@ -352,14 +353,8 @@
 		}
 
 		&.viagens{
-			.container-mapa{
-				position: relative;
-				img{
-					display: block;
-					width: 100%;
-					height: auto;
-				}
-
+			// O estilo do mapa esta no lay_components
+			.mapa-interativo{
 				h3{
 					position: absolute;
 					z-index: 2;
