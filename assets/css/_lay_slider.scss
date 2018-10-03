@@ -23,7 +23,7 @@
 		}
 
 		&.before-atual >{
-			h2{
+			h2,p{
 				@include transform(translateX(-100%));
 				opacity: 0;
 			}
@@ -32,31 +32,24 @@
 				@include transform(translateX(100%));
 				opacity: 0;
 			}
-			p,a{
-				opacity: 0;
-			}
-
 		}
 
 		&.atual >{
-			h2,div.imagem,p,a{
-				@include transition(all 0.3s ease-out);
+			h2,div.imagem,p{
+				@include transition(all 0.4s $ease-out-cubic);
 				@include transition-property(opacity, transform);
-				opacity: 1;
-			}
-
-			h2,div.imagem{
 				@include transform(translateX(0%));
+				opacity: 1;
 			}
 		}
 
 		&.deixando-atual >{
-			h2,div.imagem,p,a{
-				@include transition(all 0.3s ease-in);
+			h2,div.imagem,p{
+				@include transition-timing-function($ease-in-cubic);
 				opacity: 0;
 			}
 
-			h2{
+			h2,p{
 				@include transform(translateX(100%));
 			}
 
@@ -66,13 +59,12 @@
 		}
 
 		& >{
-			h2,div.imagem,p,a{
+			h2,div.imagem,p{
 				@include transition-property(opacity, transform);
 			}
 
 
 			h2{
-				
 				margin: 0;
 				margin-top: 1em;
 				width: 50%;
@@ -82,35 +74,38 @@
 				padding: 0.3em; 
 				@include linear-gradient(to right, $rosa, $amarelo);
 				position: relative;
-				z-index: 2;
+				z-index: 3;
 			}
 
 			p{
+				@media (max-width: $tamanho-tablet){
+					display: none;
+				}
 				margin: 0;
 				margin-top: 0.5em;
 				width: 25%;
 				font-style: italic;
-				padding-right: 0.5rem;
-			}
-
-			a{
-				margin-top: 0.5em;
-				text-decoration: none;
-				padding-right: 0.5rem;
-				display: block;
-				width: 25%;
-				text-align: right;
-				font-family: $fonte-titulo;
-				color: $rosa;
-				font-size: 1.3em;
+				padding-right: 1rem;
+				position: relative;
+				z-index: 1;
+				&.leiamais{
+					margin-top: 0;
+					text-align: right;
+					font-family: $fonte-titulo;
+					color: $rosa;
+					font-size: 1.3em;
+				}
 			}
 
 			div.imagem{
 				position: absolute;
-				z-index: 1;
+				z-index: 2;
 				right: 0;
 				top: 0;
 				width: 75%;
+				@media (max-width: $tamanho-tablet){
+					width: 100%;
+				}
 				height: 100%;
 				overflow: hidden;
 				background-size: cover;
@@ -123,23 +118,37 @@
 					width: 0px;
 				}
 			}
+
+			a{
+				position: absolute;
+				top: 0; left: 0;
+				z-index: 3;
+				width: 100%; height: 100%;
+			}
 		}
 	}
 
 	nav.bullets{
+		@media (max-width: $tamanho-tablet){
+			display: none;
+		}
+
 		position: absolute;
+		z-index: 4;
 		bottom: 0;
 		left: 0;
 		width: 25%;
-		padding: 0 1em;
+		padding: 1em 1em 0;
 		@include display(flex);
 		@include justify-content(center);
 		button{
 			width: 10px;
 			height: 10px;
-			border-radius: 50%;
+			border-radius: 5px;
 			background-color: $amarelo;
-			@include transition(background-color 0.2s linear);
+			@include transition(all 0.2s linear);
+			@include transition-property(background-color);
+
 			&.atual, &:hover{
 				background-color: $rosa;
 			}
@@ -155,7 +164,7 @@
 		position: absolute;
 		bottom: -26px;
 		right: -20px;
-		z-index: 2;
+		z-index: 4;
 		width: 120px;
 		height: 84px;
 		background-image: url(../media/triangulo-preto-slider.svg);
