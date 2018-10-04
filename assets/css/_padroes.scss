@@ -39,10 +39,23 @@ $preto:					#282828;
 $preto-texto: 			#333333;
 
 
+/* MEDIA QUERIES */
+
+$tamanho-smart-pequeno: 400px;
+$tamanho-smartphone: 600px;
+$tamanho-tablet-vertical: 800px;
+$tamanho-tablet: 1000px;
+$tamanho-notebook: 1200px;
+$tamanho-gigante: 1600px;
+
+
 /* ESTILOS PADRAO */
 
 html{
 	font-size: 16px;
+	@media (max-width: $tamanho-tablet) {
+		font-size: 15px;
+	}
 	line-height: 1.5;
 	font-family: $fonte-corpo;
 	color: $preto-texto;
@@ -51,15 +64,6 @@ html{
 h1,h2,h3,h4,h5{
 	line-height: 1.2;
 }
-
-/* MEDIA QUERIES */
-
-$tamanho-smart-pequeno: 400px;
-$tamanho-smartphone: 600px;
-$tamanho-tablet: 1000px;
-$tamanho-notebook: 1200px;
-$tamanho-gigante: 1600px;
-
 
 
 /* CONTAINER */

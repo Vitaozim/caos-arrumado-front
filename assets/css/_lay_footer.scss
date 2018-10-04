@@ -1,17 +1,103 @@
 #rodape-e-mapa{
 	margin-top: 7em;
+	@media (max-width: $tamanho-tablet){
+		margin-top: 4em;
+	}
+
 	background-image: url(../media/caosarrumado-bg2.svg);
 	#mapa-mundi{
 		margin-bottom: 2em;
+		@extend .container;
+
 		.mapa-interativo{
-			font-size: 0.9em;
-			@extend .container;
+			h2{
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				font-weight: normal;
+				font-family: $fonte-corpo;
+				font-size: 1.2em;
+				line-height: 0.9;
+				text-align: center;
+				@media (max-width: $tamanho-smartphone){
+					position: static;
+				}
+
+				span{
+					display: block;
+					color: $rosa;
+					font-size: 2.5em;
+					font-family: $fonte-titulo;
+				}
+			}
 			img.aviao{
 				position: absolute;
 				z-index: 2;
 				left: 0;
 				top: 0;
+				@media (max-width: $tamanho-smartphone){
+					display: none;
+				}
 			}
+			a.ponto{
+				font-size: 0.9em;
+			}
+
+			// Tentativa forcada de remover o afico do circulo em telas grandes
+			@media (min-width: $tamanho-smartphone){
+				a.ponto{
+					span.circulo:before{
+						content: none;
+					}
+				}
+			}
+
+			@media (max-width: $tamanho-smartphone){
+				.pontos{
+					margin-top: 1em;
+					@include display(flex);
+					@include flex-wrap(wrap);
+					@include justify-content(space-between);
+					a.ponto{
+						width: 45%;
+						margin-bottom: 0.5em;
+						position: static;
+						line-height: 1.1;
+						span.circulo{
+							color: $preto;
+							background-color: transparent;
+							width: auto;
+							height: auto;
+							display: inline;
+							border-radius: 0;
+						}
+						span.nome-regiao{
+							position: static;
+							@include animation(none);
+							display: inline;
+							top: 0; left: 0;
+							@include transform(none);
+							background-color: transparent;
+							color: $preto;
+							padding: 0;
+							border-radius: 0;
+							&:after{
+								content: none;
+							}
+						}
+					}
+				}
+			}
+
+
+			@media (max-width: $tamanho-smart-pequeno){
+				.pontos{
+					a.ponto{
+						width: 100%;
+					}
+				}
+			}
+
 		}
 	}
 
@@ -24,11 +110,13 @@
 			@include justify-content(space-between);
 			@include align-items(center);
 			p{
+				margin: 0;
 				font-size: 0.8em;
 				text-transform: uppercase;
 				color: $amarelo;
-				line-height: 1;
+				line-height: 0;
 				img{
+					margin-left: 0.5em;
 					vertical-align: middle;
 					height: 1.5em;
 					width: auto;

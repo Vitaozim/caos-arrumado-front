@@ -124,6 +124,10 @@
 				text-transform: uppercase;
 				padding: 0.5em 0;
 				font-size: 1.2em;
+				@media (max-width: $tamanho-tablet-vertical) {
+					font-size: 0.9em;
+				}
+
 				&:hover{
 					cursor: pointer;
 					color: $amarelo;

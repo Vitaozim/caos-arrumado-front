@@ -25,6 +25,10 @@ main{
 		margin-top: 7em;
 		@include display(flex);
 		@include justify-content(space-between);
+		@media (max-width: $tamanho-tablet-vertical) {
+			@include justify-content(center);
+			@include flex-wrap(wrap);
+		}
 		
 	}
 }
@@ -33,4 +37,16 @@ body{
 	background-image: url(../media/caosarrumado-bg.svg);
 	background-size: 100% 1000px;
 	background-repeat: no-repeat;
+	@media (max-width: $tamanho-tablet-vertical) {
+		background-size: 100% 800px;
+	}
+
+	@media (max-width: $tamanho-smartphone) {
+		background-size: 100% 500px;
+	}
+
+	@media (max-width: $tamanho-smart-pequeno) {
+		background-size: 100% 400px;
+	}
+
 }

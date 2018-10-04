@@ -721,27 +721,30 @@ button {
 
 /* FONTES */
 /* CORES */
+/* MEDIA QUERIES */
 /* ESTILOS PADRAO */
 html {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Neutraface Text", sans-serif;
   color: #333333; }
+  @media (max-width: 1000px) {
+    html {
+      font-size: 15px; } }
 
 h1, h2, h3, h4, h5 {
   line-height: 1.2; }
 
-/* MEDIA QUERIES */
 /* CONTAINER */
-.container, #slider-principal, #rodape-e-mapa #mapa-mundi .mapa-interativo {
+.container, #slider-principal, #rodape-e-mapa #mapa-mundi {
   width: 1120px;
   margin: 0 auto; }
 @media screen and (max-width: 1200px) {
-  .container, #slider-principal, #rodape-e-mapa #mapa-mundi .mapa-interativo {
+  .container, #slider-principal, #rodape-e-mapa #mapa-mundi {
     width: 100%;
     padding: 0 2em; } }
 @media screen and (max-width: 600px) {
-  .container, #slider-principal, #rodape-e-mapa #mapa-mundi .mapa-interativo {
+  .container, #slider-principal, #rodape-e-mapa #mapa-mundi {
     padding: 0 1em; } }
 
 .posrel {
@@ -895,6 +898,9 @@ h1, h2, h3, h4, h5 {
       text-transform: uppercase;
       padding: 0.5em 0;
       font-size: 1.2em; }
+      @media (max-width: 800px) {
+        .newsletter form input[type="button"] {
+          font-size: 0.9em; } }
       .newsletter form input[type="button"]:hover {
         cursor: pointer;
         color: #F4CC8B; }
@@ -957,15 +963,15 @@ h1, h2, h3, h4, h5 {
 
 #menuglobal {
   position: fixed;
-  z-index: 4;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
   height: 2.5rem;
   background-color: #282828; }
-  #menuglobal .container, #menuglobal #slider-principal, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo {
+  #menuglobal .container, #menuglobal #slider-principal, #menuglobal #rodape-e-mapa #mapa-mundi, #rodape-e-mapa #menuglobal #mapa-mundi {
     height: 100%; }
-    #menuglobal .container .full-width, #menuglobal #slider-principal .full-width, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width {
+    #menuglobal .container .full-width, #menuglobal #slider-principal .full-width, #menuglobal #rodape-e-mapa #mapa-mundi .full-width, #rodape-e-mapa #menuglobal #mapa-mundi .full-width {
       height: 100%;
       display: -webkit-box;
       display: -moz-box;
@@ -985,9 +991,9 @@ h1, h2, h3, h4, h5 {
       -ms-flex-pack: justify;
       background-color: #282828;
       position: relative; }
-      #menuglobal .container .full-width nav, #menuglobal #slider-principal .full-width nav, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav {
+      #menuglobal .container .full-width nav, #menuglobal #slider-principal .full-width nav, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav {
         height: 100%; }
-        #menuglobal .container .full-width nav ul, #menuglobal #slider-principal .full-width nav ul, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul {
+        #menuglobal .container .full-width nav ul, #menuglobal #slider-principal .full-width nav ul, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul {
           height: 100%;
           list-style: none;
           margin: 0;
@@ -1000,18 +1006,18 @@ h1, h2, h3, h4, h5 {
           display: -moz-flex;
           display: -ms-flexbox;
           display: flex; }
-          #menuglobal .container .full-width nav ul li, #menuglobal #slider-principal .full-width nav ul li, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li {
+          #menuglobal .container .full-width nav ul li, #menuglobal #slider-principal .full-width nav ul li, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li {
             height: 100%;
             display: inline-block;
             margin: 0;
             padding: 0; }
-            #menuglobal .container .full-width nav ul li:first-child a, #menuglobal #slider-principal .full-width nav ul li:first-child a, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li:first-child a, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li:first-child a {
+            #menuglobal .container .full-width nav ul li:first-child a, #menuglobal #slider-principal .full-width nav ul li:first-child a, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li:first-child a, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li:first-child a {
               padding-left: 0;
               border-left: 0; }
-            #menuglobal .container .full-width nav ul li:hover a.com-submenu, #menuglobal #slider-principal .full-width nav ul li:hover a.com-submenu, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li:hover a.com-submenu, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li:hover a.com-submenu {
+            #menuglobal .container .full-width nav ul li:hover a.com-submenu, #menuglobal #slider-principal .full-width nav ul li:hover a.com-submenu, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li:hover a.com-submenu, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li:hover a.com-submenu {
               border-color: #F4CC8B;
               background-color: #282828; }
-            #menuglobal .container .full-width nav ul li:hover .submenu, #menuglobal #slider-principal .full-width nav ul li:hover .submenu, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li:hover .submenu, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li:hover .submenu {
+            #menuglobal .container .full-width nav ul li:hover .submenu, #menuglobal #slider-principal .full-width nav ul li:hover .submenu, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li:hover .submenu, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li:hover .submenu {
               display: -webkit-box;
               display: -moz-box;
               display: box;
@@ -1019,7 +1025,7 @@ h1, h2, h3, h4, h5 {
               display: -moz-flex;
               display: -ms-flexbox;
               display: flex; }
-            #menuglobal .container .full-width nav ul li > a, #menuglobal #slider-principal .full-width nav ul li > a, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li > a, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li > a {
+            #menuglobal .container .full-width nav ul li > a, #menuglobal #slider-principal .full-width nav ul li > a, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li > a, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li > a {
               font-size: 0.8em;
               position: relative;
               z-index: 2;
@@ -1053,11 +1059,11 @@ h1, h2, h3, h4, h5 {
               -webkit-transition-property: color, border-color;
               -moz-transition-property: color, border-color;
               transition-property: color, border-color; }
-              #menuglobal .container .full-width nav ul li > a:hover, #menuglobal #slider-principal .full-width nav ul li > a:hover, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li > a:hover, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li > a:hover {
+              #menuglobal .container .full-width nav ul li > a:hover, #menuglobal #slider-principal .full-width nav ul li > a:hover, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li > a:hover, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li > a:hover {
                 color: #E96576; }
-              #menuglobal .container .full-width nav ul li > a.com-submenu:hover, #menuglobal #slider-principal .full-width nav ul li > a.com-submenu:hover, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li > a.com-submenu:hover, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li > a.com-submenu:hover {
+              #menuglobal .container .full-width nav ul li > a.com-submenu:hover, #menuglobal #slider-principal .full-width nav ul li > a.com-submenu:hover, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li > a.com-submenu:hover, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li > a.com-submenu:hover {
                 border-color: #F4CC8B; }
-            #menuglobal .container .full-width nav ul li .submenu, #menuglobal #slider-principal .full-width nav ul li .submenu, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu {
+            #menuglobal .container .full-width nav ul li .submenu, #menuglobal #slider-principal .full-width nav ul li .submenu, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu {
               display: none;
               position: absolute;
               z-index: 1;
@@ -1067,9 +1073,9 @@ h1, h2, h3, h4, h5 {
               overflow: hidden;
               background-color: #282828;
               border: 1px solid #F4CC8B; }
-              #menuglobal .container .full-width nav ul li .submenu > .subcateg, #menuglobal #slider-principal .full-width nav ul li .submenu > .subcateg, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .subcateg, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .subcateg {
+              #menuglobal .container .full-width nav ul li .submenu > .subcateg, #menuglobal #slider-principal .full-width nav ul li .submenu > .subcateg, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .subcateg, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .subcateg {
                 width: 20%; }
-                #menuglobal .container .full-width nav ul li .submenu > .subcateg > a, #menuglobal #slider-principal .full-width nav ul li .submenu > .subcateg > a, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .subcateg > a, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .subcateg > a {
+                #menuglobal .container .full-width nav ul li .submenu > .subcateg > a, #menuglobal #slider-principal .full-width nav ul li .submenu > .subcateg > a, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .subcateg > a, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .subcateg > a {
                   text-decoration: none;
                   text-transform: uppercase;
                   display: block;
@@ -1083,10 +1089,10 @@ h1, h2, h3, h4, h5 {
                   transition-property: color, background-color;
                   border-bottom: 2px solid #282828;
                   padding: 0.7em 0.5em; }
-                  #menuglobal .container .full-width nav ul li .submenu > .subcateg > a.atual, #menuglobal #slider-principal .full-width nav ul li .submenu > .subcateg > a.atual, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .subcateg > a.atual, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .subcateg > a.atual {
+                  #menuglobal .container .full-width nav ul li .submenu > .subcateg > a.atual, #menuglobal #slider-principal .full-width nav ul li .submenu > .subcateg > a.atual, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .subcateg > a.atual, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .subcateg > a.atual {
                     background-color: transparent;
                     color: #E96576; }
-              #menuglobal .container .full-width nav ul li .submenu > .posts, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .posts, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .posts {
+              #menuglobal .container .full-width nav ul li .submenu > .posts, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .posts, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .posts {
                 width: 80%;
                 display: -webkit-box;
                 display: -moz-box;
@@ -1096,9 +1102,9 @@ h1, h2, h3, h4, h5 {
                 display: -ms-flexbox;
                 display: flex;
                 padding: 0.8em; }
-                #menuglobal .container .full-width nav ul li .submenu > .posts.dn, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts.dn, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .posts.dn, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .posts.dn {
+                #menuglobal .container .full-width nav ul li .submenu > .posts.dn, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts.dn, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .posts.dn, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .posts.dn {
                   display: none; }
-                #menuglobal .container .full-width nav ul li .submenu > .posts a, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .posts a, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .posts a {
+                #menuglobal .container .full-width nav ul li .submenu > .posts a, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .posts a, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .posts a {
                   -webkit-animation: postsurge 0.2s linear 0s 1 normal forwards;
                   -moz-animation: postsurge 0.2s linear 0s 1 normal forwards;
                   animation: postsurge 0.2s linear 0s 1 normal forwards;
@@ -1122,46 +1128,46 @@ h1, h2, h3, h4, h5 {
     opacity: 0; }
   100% {
     opacity: 1; } }
-                  #menuglobal .container .full-width nav ul li .submenu > .posts a:nth-child(1), #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a:nth-child(1), #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .posts a:nth-child(1), #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .posts a:nth-child(1) {
+                  #menuglobal .container .full-width nav ul li .submenu > .posts a:nth-child(1), #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a:nth-child(1), #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .posts a:nth-child(1), #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .posts a:nth-child(1) {
                     -webkit-animation-delay: 0.1s;
                     -moz-animation-delay: 0.1s;
                     animation-delay: 0.1s; }
-                  #menuglobal .container .full-width nav ul li .submenu > .posts a:nth-child(2), #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a:nth-child(2), #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .posts a:nth-child(2), #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .posts a:nth-child(2) {
+                  #menuglobal .container .full-width nav ul li .submenu > .posts a:nth-child(2), #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a:nth-child(2), #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .posts a:nth-child(2), #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .posts a:nth-child(2) {
                     -webkit-animation-delay: 0.2s;
                     -moz-animation-delay: 0.2s;
                     animation-delay: 0.2s; }
-                  #menuglobal .container .full-width nav ul li .submenu > .posts a:nth-child(3), #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a:nth-child(3), #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .posts a:nth-child(3), #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .posts a:nth-child(3) {
+                  #menuglobal .container .full-width nav ul li .submenu > .posts a:nth-child(3), #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a:nth-child(3), #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .posts a:nth-child(3), #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .posts a:nth-child(3) {
                     -webkit-animation-delay: 0.3s;
                     -moz-animation-delay: 0.3s;
                     animation-delay: 0.3s; }
-                  #menuglobal .container .full-width nav ul li .submenu > .posts a:nth-child(4), #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a:nth-child(4), #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .posts a:nth-child(4), #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .posts a:nth-child(4) {
+                  #menuglobal .container .full-width nav ul li .submenu > .posts a:nth-child(4), #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a:nth-child(4), #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .posts a:nth-child(4), #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .posts a:nth-child(4) {
                     -webkit-animation-delay: 0.4s;
                     -moz-animation-delay: 0.4s;
                     animation-delay: 0.4s; }
-                  #menuglobal .container .full-width nav ul li .submenu > .posts a:last-child, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a:last-child, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .posts a:last-child, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .posts a:last-child {
+                  #menuglobal .container .full-width nav ul li .submenu > .posts a:last-child, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a:last-child, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .posts a:last-child, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .posts a:last-child {
                     padding-right: 0; }
-                  #menuglobal .container .full-width nav ul li .submenu > .posts a:hover p, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a:hover p, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .posts a:hover p, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .posts a:hover p {
+                  #menuglobal .container .full-width nav ul li .submenu > .posts a:hover p, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a:hover p, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .posts a:hover p, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .posts a:hover p {
                     color: #E96576; }
-                  #menuglobal .container .full-width nav ul li .submenu > .posts a .img, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a .img, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .posts a .img, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .posts a .img {
+                  #menuglobal .container .full-width nav ul li .submenu > .posts a .img, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a .img, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .posts a .img, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .posts a .img {
                     width: 100%;
                     height: 120px;
                     position: relative;
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat; }
-                    #menuglobal .container .full-width nav ul li .submenu > .posts a .img img, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a .img img, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .posts a .img img, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .posts a .img img {
+                    #menuglobal .container .full-width nav ul li .submenu > .posts a .img img, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a .img img, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .posts a .img img, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .posts a .img img {
                       position: absolute;
                       top: 0;
                       right: 0;
                       height: 0;
                       width: 0;
                       opacity: 0; }
-                  #menuglobal .container .full-width nav ul li .submenu > .posts a p, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a p, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width nav ul li .submenu > .posts a p, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width nav ul li .submenu > .posts a p {
+                  #menuglobal .container .full-width nav ul li .submenu > .posts a p, #menuglobal #slider-principal .full-width nav ul li .submenu > .posts a p, #menuglobal #rodape-e-mapa #mapa-mundi .full-width nav ul li .submenu > .posts a p, #rodape-e-mapa #menuglobal #mapa-mundi .full-width nav ul li .submenu > .posts a p {
                     color: #F4CC8B;
                     -webkit-transition: color 0.2s linear;
                     -moz-transition: color 0.2s linear;
                     transition: color 0.2s linear; }
-      #menuglobal .container .full-width .linguas, #menuglobal #slider-principal .full-width .linguas, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width .linguas, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width .linguas {
+      #menuglobal .container .full-width .linguas, #menuglobal #slider-principal .full-width .linguas, #menuglobal #rodape-e-mapa #mapa-mundi .full-width .linguas, #rodape-e-mapa #menuglobal #mapa-mundi .full-width .linguas {
         height: 100%;
         display: -webkit-box;
         display: -moz-box;
@@ -1179,7 +1185,7 @@ h1, h2, h3, h4, h5 {
         -o-align-items: center;
         align-items: center;
         -ms-flex-align: center; }
-        #menuglobal .container .full-width .linguas a, #menuglobal #slider-principal .full-width .linguas a, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width .linguas a, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width .linguas a {
+        #menuglobal .container .full-width .linguas a, #menuglobal #slider-principal .full-width .linguas a, #menuglobal #rodape-e-mapa #mapa-mundi .full-width .linguas a, #rodape-e-mapa #menuglobal #mapa-mundi .full-width .linguas a {
           height: 18px;
           width: 27px;
           display: inline-block;
@@ -1187,9 +1193,9 @@ h1, h2, h3, h4, h5 {
           background-size: auto 18px;
           background-repeat: no-repeat;
           background-image: url(../media/sprite-bandeiras.svg); }
-          #menuglobal .container .full-width .linguas a.pt-br, #menuglobal #slider-principal .full-width .linguas a.pt-br, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width .linguas a.pt-br, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width .linguas a.pt-br {
+          #menuglobal .container .full-width .linguas a.pt-br, #menuglobal #slider-principal .full-width .linguas a.pt-br, #menuglobal #rodape-e-mapa #mapa-mundi .full-width .linguas a.pt-br, #rodape-e-mapa #menuglobal #mapa-mundi .full-width .linguas a.pt-br {
             background-position: -27px 0; }
-          #menuglobal .container .full-width .linguas a.it, #menuglobal #slider-principal .full-width .linguas a.it, #menuglobal #rodape-e-mapa #mapa-mundi .mapa-interativo .full-width .linguas a.it, #rodape-e-mapa #mapa-mundi #menuglobal .mapa-interativo .full-width .linguas a.it {
+          #menuglobal .container .full-width .linguas a.it, #menuglobal #slider-principal .full-width .linguas a.it, #menuglobal #rodape-e-mapa #mapa-mundi .full-width .linguas a.it, #rodape-e-mapa #menuglobal #mapa-mundi .full-width .linguas a.it {
             background-position: 0 0; }
 
 #widget-instagram {
@@ -1238,10 +1244,15 @@ h1, h2, h3, h4, h5 {
           -ms-transform: translateY(-50%) scale(1);
           -o-transform: translateY(-50%) scale(1);
           transform: translateY(-50%) scale(1); }
-        #widget-instagram ul li a:hover:after {
+        #widget-instagram ul li a:hover div {
           opacity: 1; }
-        #widget-instagram ul li a:after {
-          content: '';
+        #widget-instagram ul li a img {
+          position: relative;
+          z-index: 1;
+          display: block;
+          width: 100%;
+          height: 100%; }
+        #widget-instagram ul li a div {
           position: absolute;
           z-index: 2;
           top: 0;
@@ -1252,40 +1263,59 @@ h1, h2, h3, h4, h5 {
           opacity: 0;
           -webkit-transition: opacity 0.2s linear;
           -moz-transition: opacity 0.2s linear;
-          transition: opacity 0.2s linear; }
-        #widget-instagram ul li a img {
-          position: relative;
-          z-index: 1;
-          display: block;
-          width: 100%;
-          height: 100%; }
-        #widget-instagram ul li a p {
-          position: absolute;
-          z-index: 3;
-          width: 100%;
-          top: 50%;
-          left: 0;
-          -webkit-transform: translateY(-50%) scale(1.2);
-          -moz-transform: translateY(-50%) scale(1.2);
-          -ms-transform: translateY(-50%) scale(1.2);
-          -o-transform: translateY(-50%) scale(1.2);
-          transform: translateY(-50%) scale(1.2);
-          color: #FDE8C5;
-          text-align: center;
-          opacity: 0;
-          -webkit-transition: all 0.2s linear;
-          -moz-transition: all 0.2s linear;
-          transition: all 0.2s linear;
-          -webkit-transition-property: opacity, -webkit-transform;
-          -moz-transition-property: opacity, -moz-transform;
-          transition-property: opacity, transform; }
-          #widget-instagram ul li a p span.afico {
-            display: block;
-            font-size: 2em; }
+          transition: opacity 0.2s linear;
+          display: -webkit-box;
+          display: -moz-box;
+          display: box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -moz-box-pack: center;
+          box-pack: center;
+          -webkit-justify-content: center;
+          -moz-justify-content: center;
+          -ms-justify-content: center;
+          -o-justify-content: center;
+          justify-content: center;
+          -ms-flex-pack: center;
+          -webkit-box-align: center;
+          -moz-box-align: center;
+          box-align: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          -ms-align-items: center;
+          -o-align-items: center;
+          align-items: center;
+          -ms-flex-align: center; }
+          #widget-instagram ul li a div p {
+            margin: 0;
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            -webkit-transform: translateY(-50%) scale(1.2);
+            -moz-transform: translateY(-50%) scale(1.2);
+            -ms-transform: translateY(-50%) scale(1.2);
+            -o-transform: translateY(-50%) scale(1.2);
+            transform: translateY(-50%) scale(1.2);
+            color: #FDE8C5;
+            text-align: center;
+            -webkit-transition: -webkit-transform 0.2s linear;
+            -moz-transition: -moz-transform 0.2s linear;
+            transition: transform 0.2s linear; }
+            #widget-instagram ul li a div p span.afico {
+              display: block;
+              font-size: 2em; }
+              @media (max-width: 600px) {
+                #widget-instagram ul li a div p span.afico {
+                  font-size: 1.2em; } }
 
 #topo {
   margin-top: 2em; }
-  #topo .container, #topo #slider-principal, #topo #rodape-e-mapa #mapa-mundi .mapa-interativo, #rodape-e-mapa #mapa-mundi #topo .mapa-interativo {
+  #topo .container, #topo #slider-principal, #topo #rodape-e-mapa #mapa-mundi, #rodape-e-mapa #topo #mapa-mundi {
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -1355,6 +1385,9 @@ h1, h2, h3, h4, h5 {
   margin-top: 3em;
   overflow: visible;
   position: relative; }
+  @media (max-width: 600px) {
+    #slider-principal {
+      display: none; } }
   #slider-principal .container-slides {
     overflow: visible;
     position: relative;
@@ -1430,6 +1463,12 @@ h1, h2, h3, h4, h5 {
       background-image: linear-gradient(to right,#E96576, #F4CC8B);
       position: relative;
       z-index: 3; }
+      @media (max-width: 1000px) {
+        #slider-principal section > h2 {
+          width: 70%; } }
+      @media (max-width: 800px) {
+        #slider-principal section > h2 {
+          font-size: 1.3em; } }
     #slider-principal section > p {
       margin: 0;
       margin-top: 0.5em;
@@ -1553,6 +1592,12 @@ h1, h2, h3, h4, h5 {
 
 #primeiros-posts {
   width: calc(100% - 300px - 2em); }
+  @media (max-width: 1000px) {
+    #primeiros-posts {
+      width: calc(100% - 300px - 0.8em); } }
+  @media (max-width: 800px) {
+    #primeiros-posts {
+      width: 100%; } }
   #primeiros-posts > ul.grid {
     list-style: none;
     padding: 0;
@@ -1561,14 +1606,44 @@ h1, h2, h3, h4, h5 {
       width: 2em; }
     #primeiros-posts > ul.grid .grid-sizer {
       width: calc(50% - 1em); }
+    @media (max-width: 1000px) {
+      #primeiros-posts > ul.grid .gutter-sizer {
+        width: 0.8em; }
+      #primeiros-posts > ul.grid .grid-sizer {
+        width: calc(50% - 0.4em); } }
+    @media (max-width: 800px) {
+      #primeiros-posts > ul.grid .grid-sizer {
+        width: calc(33% - 0.4em); } }
+    @media (max-width: 600px) {
+      #primeiros-posts > ul.grid .grid-sizer {
+        width: calc(50% - 0.4em); } }
+    @media (max-width: 400px) {
+      #primeiros-posts > ul.grid .grid-sizer {
+        width: 100%; } }
     #primeiros-posts > ul.grid > .grid-item {
       width: calc(50% - 1em);
       padding: 0;
       margin: 0;
       margin-bottom: 4.5em;
       display: block; }
+      @media (max-width: 1000px) {
+        #primeiros-posts > ul.grid > .grid-item {
+          width: calc(50% - 0.4em);
+          margin-bottom: 3.5em; } }
+      @media (max-width: 800px) {
+        #primeiros-posts > ul.grid > .grid-item {
+          width: calc(33% - 0.4em); } }
+      @media (max-width: 600px) {
+        #primeiros-posts > ul.grid > .grid-item {
+          width: calc(50% - 0.4em); } }
+      @media (max-width: 400px) {
+        #primeiros-posts > ul.grid > .grid-item {
+          width: 100%; } }
       #primeiros-posts > ul.grid > .grid-item:hover > .leiamais a {
         padding: 0 2.5rem; }
+        @media (max-width: 800px) {
+          #primeiros-posts > ul.grid > .grid-item:hover > .leiamais a {
+            padding: 0 1.5rem; } }
       #primeiros-posts > ul.grid > .grid-item > h2 {
         margin: 0;
         text-align: center;
@@ -1577,6 +1652,9 @@ h1, h2, h3, h4, h5 {
         font-family: "Neutraface Text", sans-serif;
         font-weight: normal;
         color: #E96576; }
+        @media (max-width: 1000px) {
+          #primeiros-posts > ul.grid > .grid-item > h2 {
+            font-size: 1.6em; } }
         @supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
           #primeiros-posts > ul.grid > .grid-item > h2 {
             background-color: #F4CC8B;
@@ -1668,8 +1746,13 @@ h1, h2, h3, h4, h5 {
           -o-align-items: center;
           align-items: center;
           -ms-flex-align: center; }
+          @media (max-width: 800px) {
+            #primeiros-posts > ul.grid > .grid-item > div.leiamais a {
+              padding: 0 1rem;
+              box-shadow: 0px 0px 0px 5px white; } }
   #primeiros-posts #mais-posts {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 3em; }
     #primeiros-posts #mais-posts h2 {
       text-align: center;
       font-family: "Nickainley", cursive, sans-serif;
@@ -2135,19 +2218,105 @@ h1, h2, h3, h4, h5 {
 #rodape-e-mapa {
   margin-top: 7em;
   background-image: url(../media/caosarrumado-bg2.svg); }
+  @media (max-width: 1000px) {
+    #rodape-e-mapa {
+      margin-top: 4em; } }
   #rodape-e-mapa #mapa-mundi {
     margin-bottom: 2em; }
-    #rodape-e-mapa #mapa-mundi .mapa-interativo {
+    #rodape-e-mapa #mapa-mundi .mapa-interativo h2 {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      font-weight: normal;
+      font-family: "Neutraface Text", sans-serif;
+      font-size: 1.2em;
+      line-height: 0.9;
+      text-align: center; }
+      @media (max-width: 600px) {
+        #rodape-e-mapa #mapa-mundi .mapa-interativo h2 {
+          position: static; } }
+      #rodape-e-mapa #mapa-mundi .mapa-interativo h2 span {
+        display: block;
+        color: #E96576;
+        font-size: 2.5em;
+        font-family: "Nickainley", cursive, sans-serif; }
+    #rodape-e-mapa #mapa-mundi .mapa-interativo img.aviao {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0; }
+      @media (max-width: 600px) {
+        #rodape-e-mapa #mapa-mundi .mapa-interativo img.aviao {
+          display: none; } }
+    #rodape-e-mapa #mapa-mundi .mapa-interativo a.ponto {
       font-size: 0.9em; }
-      #rodape-e-mapa #mapa-mundi .mapa-interativo img.aviao {
-        position: absolute;
-        z-index: 2;
-        left: 0;
-        top: 0; }
+    @media (min-width: 600px) {
+      #rodape-e-mapa #mapa-mundi .mapa-interativo a.ponto span.circulo:before {
+        content: none; } }
+    @media (max-width: 600px) {
+      #rodape-e-mapa #mapa-mundi .mapa-interativo .pontos {
+        margin-top: 1em;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-lines: multiple;
+        -moz-box-lines: multiple;
+        box-lines: multiple;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        box-pack: justify;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+        -ms-flex-pack: justify; }
+        #rodape-e-mapa #mapa-mundi .mapa-interativo .pontos a.ponto {
+          width: 45%;
+          margin-bottom: 0.5em;
+          position: static;
+          line-height: 1.1; }
+          #rodape-e-mapa #mapa-mundi .mapa-interativo .pontos a.ponto span.circulo {
+            color: #282828;
+            background-color: transparent;
+            width: auto;
+            height: auto;
+            display: inline;
+            border-radius: 0; }
+          #rodape-e-mapa #mapa-mundi .mapa-interativo .pontos a.ponto span.nome-regiao {
+            position: static;
+            -webkit-animation: none;
+            -moz-animation: none;
+            animation: none;
+            display: inline;
+            top: 0;
+            left: 0;
+            -webkit-transform: none;
+            -moz-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            transform: none;
+            background-color: transparent;
+            color: #282828;
+            padding: 0;
+            border-radius: 0; }
+            #rodape-e-mapa #mapa-mundi .mapa-interativo .pontos a.ponto span.nome-regiao:after {
+              content: none; } }
+    @media (max-width: 400px) {
+      #rodape-e-mapa #mapa-mundi .mapa-interativo .pontos a.ponto {
+        width: 100%; } }
   #rodape-e-mapa #rodape {
     height: 3em;
     background-color: #282828; }
-    #rodape-e-mapa #rodape > .container, #rodape-e-mapa #rodape > #slider-principal, #rodape-e-mapa #mapa-mundi #rodape > .mapa-interativo {
+    #rodape-e-mapa #rodape > .container, #rodape-e-mapa #rodape > #slider-principal, #rodape-e-mapa #rodape > #mapa-mundi {
       height: 100%;
       display: -webkit-box;
       display: -moz-box;
@@ -2174,12 +2343,14 @@ h1, h2, h3, h4, h5 {
       -o-align-items: center;
       align-items: center;
       -ms-flex-align: center; }
-      #rodape-e-mapa #rodape > .container p, #rodape-e-mapa #rodape > #slider-principal p, #rodape-e-mapa #mapa-mundi #rodape > .mapa-interativo p {
+      #rodape-e-mapa #rodape > .container p, #rodape-e-mapa #rodape > #slider-principal p, #rodape-e-mapa #rodape > #mapa-mundi p {
+        margin: 0;
         font-size: 0.8em;
         text-transform: uppercase;
         color: #F4CC8B;
-        line-height: 1; }
-        #rodape-e-mapa #rodape > .container p img, #rodape-e-mapa #rodape > #slider-principal p img, #rodape-e-mapa #mapa-mundi #rodape > .mapa-interativo p img {
+        line-height: 0; }
+        #rodape-e-mapa #rodape > .container p img, #rodape-e-mapa #rodape > #slider-principal p img, #rodape-e-mapa #rodape > #mapa-mundi p img {
+          margin-left: 0.5em;
           vertical-align: middle;
           height: 1.5em;
           width: auto; }
@@ -2204,11 +2375,38 @@ main {
     -o-justify-content: space-between;
     justify-content: space-between;
     -ms-flex-pack: justify; }
+    @media (max-width: 800px) {
+      main .posts-e-lateral {
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        box-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center;
+        -webkit-box-lines: multiple;
+        -moz-box-lines: multiple;
+        box-lines: multiple;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
 
 body {
   overflow-x: hidden;
   background-image: url(../media/caosarrumado-bg.svg);
   background-size: 100% 1000px;
   background-repeat: no-repeat; }
+  @media (max-width: 800px) {
+    body {
+      background-size: 100% 800px; } }
+  @media (max-width: 600px) {
+    body {
+      background-size: 100% 500px; } }
+  @media (max-width: 400px) {
+    body {
+      background-size: 100% 400px; } }
 
 /*# sourceMappingURL=layout.css.map */

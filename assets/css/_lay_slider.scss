@@ -3,6 +3,9 @@
 	@extend .container;
 	overflow: visible;
 	position: relative;
+	@media (max-width: $tamanho-smartphone){
+		display: none;
+	}
 
 	.container-slides{
 		overflow: visible;
@@ -71,6 +74,13 @@
 				color: white;
 				font-weight: normal;
 				font-size: 1.5em;
+				@media (max-width: $tamanho-tablet){
+					width: 70%;
+				}
+
+				@media (max-width: $tamanho-tablet-vertical){
+					font-size: 1.3em;
+				}
 				padding: 0.3em; 
 				@include linear-gradient(to right, $rosa, $amarelo);
 				position: relative;
