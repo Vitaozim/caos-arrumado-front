@@ -95,7 +95,6 @@ jQuery(document).ready(function($) {
 
 
 	// Submenus
-
 	var $submenus = $('#menuglobal .submenu');
 
 	$submenus.each(function(index, el) {
@@ -111,6 +110,16 @@ jQuery(document).ready(function($) {
 			$conjPosts.addClass('dn').eq(thisIndex).removeClass('dn');
 		});
 	});
+
+
+
+
+	// Botao do menu
+	var $btmenu = $('#menuglobal .telas-pequenas .btmenu');
+	$btmenu.on('click', function(event) {
+		$(this).closest('.telas-pequenas').find('nav').toggleClass('db');;
+	});
+
 });
 
 

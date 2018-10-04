@@ -5,32 +5,33 @@
   @return unquote("\"\\#{$str}\"");
 }
 
-$afico-angle-double-down: unicode(ea02);
-$afico-angle-double-left: unicode(ea03);
-$afico-angle-double-right: unicode(ea04);
-$afico-angle-double-up: unicode(ea05);
-$afico-angle-down: unicode(ea06);
-$afico-angle-left: unicode(ea07);
-$afico-angle-right: unicode(ea08);
-$afico-angle-up: unicode(ea09);
-$afico-bars: unicode(ea0a);
-$afico-behance: unicode(ea0b);
-$afico-bookmark-o: unicode(ea0c);
-$afico-bookmark: unicode(ea0d);
-$afico-bullhorn: unicode(ea0e);
-$afico-calendar-o: unicode(ea0f);
-$afico-calendar: unicode(ea10);
-$afico-check-square-o: unicode(ea11);
-$afico-chevron-down: unicode(ea12);
-$afico-chevron-left: unicode(ea13);
-$afico-chevron-right: unicode(ea14);
-$afico-chevron-up: unicode(ea15);
-$afico-diamond: unicode(ea16);
-$afico-dribbble: unicode(ea17);
-$afico-dropbox: unicode(ea18);
-$afico-envelope-o: unicode(ea19);
-$afico-envelope: unicode(ea1a);
-$afico-etsy: unicode(ea1b);
+$afico-angle-double-down: unicode(ea01);
+$afico-angle-double-left: unicode(ea02);
+$afico-angle-double-right: unicode(ea03);
+$afico-angle-double-up: unicode(ea04);
+$afico-angle-down: unicode(ea05);
+$afico-angle-left: unicode(ea06);
+$afico-angle-right: unicode(ea07);
+$afico-angle-up: unicode(ea08);
+$afico-bars: unicode(ea09);
+$afico-behance: unicode(ea0a);
+$afico-bookmark-o: unicode(ea0b);
+$afico-bookmark: unicode(ea0c);
+$afico-bullhorn: unicode(ea0d);
+$afico-calendar-o: unicode(ea0e);
+$afico-calendar: unicode(ea0f);
+$afico-check-square-o: unicode(ea10);
+$afico-chevron-down: unicode(ea11);
+$afico-chevron-left: unicode(ea12);
+$afico-chevron-right: unicode(ea13);
+$afico-chevron-up: unicode(ea14);
+$afico-diamond: unicode(ea15);
+$afico-dribbble: unicode(ea16);
+$afico-dropbox: unicode(ea17);
+$afico-envelope-o: unicode(ea18);
+$afico-envelope: unicode(ea19);
+$afico-etsy: unicode(ea1a);
+$afico-facebook-f: unicode(ea1b);
 $afico-gift: unicode(ea1c);
 $afico-google-plus: unicode(ea1d);
 $afico-heart-o: unicode(ea1e);
@@ -68,8 +69,8 @@ $afico-skype: unicode(ea3d);
 $afico-snapchat-ghost: unicode(ea3e);
 $afico-snowflake-o: unicode(ea3f);
 $afico-soundcloud: unicode(ea40);
-$afico-spotify: unicode(ea41);
-$afico-square-o: unicode(ea42);
+$afico-spotify: unicode(ea42);
+$afico-square-o: unicode(ea41);
 $afico-square: unicode(ea43);
 $afico-star-half-empty: unicode(ea44);
 $afico-star-o: unicode(ea45);
@@ -185,6 +186,10 @@ $afico-youtube-play: unicode(ea4e);
 
 .afico-etsy::before {
   content: $afico-etsy;
+}
+
+.afico-facebook-f::before {
+  content: $afico-facebook-f;
 }
 
 .afico-gift::before {

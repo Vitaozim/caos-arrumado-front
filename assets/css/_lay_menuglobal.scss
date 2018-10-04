@@ -4,15 +4,39 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 2.5rem;
+	height: auto;
 	background-color: $preto;
 	.container{
-		height: 100%;	
-		.full-width{
-			height: 100%;	
+		height: 100%;
+
+		.linguas{
+			height: 100%;
+			@include display(flex);
+			@include align-items(center);
+			a{
+				height: 18px;
+				width: 27px;
+				display: inline-block;
+				margin-left: 9px;
+				background-size: auto 18px;
+				background-repeat: no-repeat;
+				background-image: url(../media/sprite-bandeiras.svg);
+				&.pt-br{
+					background-position: -27px 0;
+				}
+
+				&.it{
+					background-position: 0 0;
+				}
+			}
+		}
+		
+		
+		.telas-grandes{
+			width: 100%;
+			height: 2.5rem;
 			@include display(flex);
 			@include justify-content(space-between);
-			background-color: $preto;
 			position: relative;
 			nav{
 				height: 100%;
@@ -111,11 +135,8 @@
 									@include display(none);
 								}
 								a{
-									@include keyframes(postsurge){
-										0%{opacity: 0;}
-										100%{opacity: 1;}
-									}
-									@include animation(postsurge 0.2s linear 0s 1 normal forwards);
+									
+									@include animation(tornarVisivel 0.2s linear 0s 1 normal forwards);
 									&:nth-child(1){@include animation-delay(0.1s); }
 									&:nth-child(2){@include animation-delay(0.2s); }
 									&:nth-child(3){@include animation-delay(0.3s); }
@@ -159,28 +180,96 @@
 					}
 				}
 			}
+		}
 
+		.telas-pequenas{
+			display: none;
+			height: 100%;
 
-			.linguas{
-				height: 100%;
+			.bt-e-linguas{
+				height: 2.5em;
 				@include display(flex);
-				@include align-items(center);
-				a{
-					height: 18px;
-					width: 27px;
-					display: inline-block;
-					margin-left: 9px;
-					background-size: auto 18px;
-					background-repeat: no-repeat;
-					background-image: url(../media/sprite-bandeiras.svg);
-					&.pt-br{
-						background-position: -27px 0;
-					}
+				@include justify-content(space-between);
 
-					&.it{
-						background-position: 0 0;
+				.btmenu{
+					height: 100%;
+					line-height: 1;
+					display: block;
+					text-align: left;
+					text-transform: uppercase;
+					color: $amarelo;
+					span.afico{
+						vertical-align: top;
 					}
 				}
+			}
+			
+
+			nav{
+				display: none;
+				&.db{
+					display: block;
+				}
+				ul{
+					display: block;
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					border-top: 2px solid $amarelo;
+					padding: 0.3em 0;
+					
+					li{
+						margin: 0;
+						width: 100%;
+						opacity: 0;
+						@include animation(tornarVisivel 0.3s linear 0s 1 normal forwards);
+
+						@for $i from 1 through 30 {
+							&:nth-child(#{$i}) {
+								@include animation-delay(0.05s * ($i - 1));
+							}
+						}
+
+						&.linguas{
+							
+							@include display(flex);
+							@include align-items(center);
+							a{
+								height: 18px;
+								width: 27px;
+								display: inline-block;
+								margin-left: 9px;
+								background-size: auto 18px;
+								background-repeat: no-repeat;
+								background-image: url(../media/sprite-bandeiras.svg);
+								&.pt-br{
+									background-position: -27px 0;
+								}
+
+								&.it{
+									background-position: 0 0;
+								}
+							}
+						}
+						a{
+							padding: 0.2em 0;
+							display: block;
+							width: 100%;
+							text-decoration: none;
+							color: $amarelo;
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+
+		@media (max-width: $tamanho-tablet-vertical){
+			.telas-grandes{
+				display: none;
+			}
+			.telas-pequenas{
+				display: block;
 			}
 		}
 	}
