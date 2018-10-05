@@ -14,6 +14,7 @@
 				position: absolute;
 				left: 0;
 				bottom: 0;
+				z-index: 2;
 				font-weight: normal;
 				font-family: $fonte-corpo;
 				font-size: 1.2em;
@@ -21,6 +22,9 @@
 				text-align: center;
 				@media (max-width: $tamanho-smartphone){
 					position: static;
+					&:before{
+						content: none;
+					}
 				}
 
 				span{
@@ -28,6 +32,20 @@
 					color: $rosa;
 					font-size: 2.5em;
 					font-family: $fonte-titulo;
+				}
+
+				&:before{
+					content: '';
+					position: absolute;
+					z-index: -1;
+					top: -10px;
+					left: 0px;
+					width: 100%;
+					height: calc(100% + 20px);
+					background-color: white;
+					-webkit-clip-path: polygon(10% 0%, 100% 45%, 0% 100%);
+					clip-path: polygon(10% 0%, 100% 45%, 0% 100%);
+
 				}
 			}
 			img.aviao{
@@ -42,70 +60,14 @@
 			a.ponto{
 				font-size: 0.9em;
 			}
-
-			// Tentativa forcada de remover o afico do circulo em telas grandes
-			@media (min-width: $tamanho-smartphone){
-				a.ponto{
-					span.circulo:before{
-						content: none;
-					}
-				}
-			}
-
-			@media (max-width: $tamanho-smartphone){
-				.pontos{
-					margin-top: 1em;
-					@include display(flex);
-					@include flex-wrap(wrap);
-					@include justify-content(space-between);
-					a.ponto{
-						width: 45%;
-						margin-bottom: 0.5em;
-						position: static;
-						line-height: 1.1;
-						span.circulo{
-							color: $preto;
-							background-color: transparent;
-							width: auto;
-							height: auto;
-							display: inline;
-							border-radius: 0;
-						}
-						span.nome-regiao{
-							position: static;
-							@include animation(none);
-							display: inline;
-							top: 0; left: 0;
-							@include transform(none);
-							background-color: transparent;
-							color: $preto;
-							padding: 0;
-							border-radius: 0;
-							&:after{
-								content: none;
-							}
-						}
-					}
-				}
-			}
-
-
-			@media (max-width: $tamanho-smart-pequeno){
-				.pontos{
-					a.ponto{
-						width: 100%;
-					}
-				}
-			}
-
 		}
 	}
 
 	#rodape{
-		height: 3em;
+		height: auto;
 		background-color: $preto;
 		& > .container{
-			height: 100%;
+			height: 3em;
 			@include display(flex);
 			@include justify-content(space-between);
 			@include align-items(center);
@@ -114,12 +76,29 @@
 				font-size: 0.8em;
 				text-transform: uppercase;
 				color: $amarelo;
-				line-height: 0;
-				img{
-					margin-left: 0.5em;
+				line-height: 1;
+				a{
+					display: inline-block;
 					vertical-align: middle;
-					height: 1.5em;
-					width: auto;
+					margin-left: 0.5em;
+					img{
+						display: block;
+						height: 1.5em;
+						width: auto;
+					}
+				}
+			}
+
+			@media (max-width: $tamanho-tablet-vertical){
+				height: auto;
+				@include display(block);
+				padding-top: 1em;
+				padding-bottom: 1em;
+				
+				p{
+					display: block;
+					text-align: center;
+					padding: 0.5em 0;
 				}
 			}
 		}

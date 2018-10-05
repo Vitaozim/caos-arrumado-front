@@ -19,6 +19,12 @@
 				display: block;
 			}
 		}
+
+		span.afico{
+			display: none;
+			color: $preto;
+		}
+
 		span.circulo{
 			display: block;
 			width: 12px;
@@ -64,6 +70,50 @@
 			}
 		}
 	}
+
+	@media (max-width: $tamanho-smartphone){
+		.pontos{
+			margin-top: 1em;
+			@include display(flex);
+			@include flex-wrap(wrap);
+			@include justify-content(space-between);
+			a.ponto{
+				width: 45%;
+				margin-bottom: 0.5em;
+				position: static;
+				line-height: 1.1;
+				span.afico{
+					display: inline;
+				}
+				span.circulo{
+					display: none;
+				}
+				span.nome-regiao{
+					position: static;
+					@include animation(none);
+					display: inline;
+					top: 0; left: 0;
+					@include transform(none);
+					background-color: transparent;
+					color: $preto;
+					padding: 0;
+					border-radius: 0;
+					&:after{
+						content: none;
+					}
+				}
+			}
+		}
+	}
+
+
+	// @media (max-width: $tamanho-smart-pequeno){
+	// 	.pontos{
+	// 		a.ponto{
+	// 			width: 100%;
+	// 		}
+	// 	}
+	// }
 }
 
 

@@ -35,9 +35,38 @@
 				}
 			}
 
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(5),
+			&:nth-child(6),
+			&:nth-child(7),
+			&:nth-child(9),
+			&:nth-child(10),
+			&:nth-child(11){
+				a:after{
+					content: '';
+					position: absolute;
+					z-index: 2;
+					background-image: url(../media/sprite-triangulos.svg);
+					background-size: cover;
+					background-repeat: no-repeat;
+					width: 60px;
+					height: 18px;
+				}
+			}
+
+			&:nth-child(1) a:after{
+				bottom: -5px;
+				right: -5px;
+				background-position: 0 0;
+				@include transform(rotate(30deg));
+			}
+
 			a{
 				display: block;
 				position: relative;
+				z-index: 1;
 				&:hover{
 					p{
 						opacity: 1;
