@@ -35,11 +35,45 @@
 		}
 
 		&.perfil{
+			position: relative;
+
 			.foto-e-bemvindo{
 				width: 100%;
 				position: relative;
 				z-index: 2;
 				margin-bottom: 2em;
+
+				&:before{
+					content: '';
+					position: absolute;
+					z-index: -1;
+					bottom: -11px;
+					left: -10px;
+					width: 90px;
+					height: 60px;
+					background-image: url(../media/sprites-triangulos2.svg);
+					background-repeat: no-repeat;
+					background-size: 200% auto;
+					background-position: 100% -312px;
+					@include transform(rotate(190deg));
+				}
+
+				&:after{
+					content: '';
+					position: absolute;
+					z-index: -1;
+					bottom: -11px;
+					right: -10px;
+					width: 90px;
+					height: 60px;
+					background-image: url(../media/sprites-triangulos2.svg);
+					background-repeat: no-repeat;
+					background-size: 200% auto;
+					background-position: 0px -62px;
+					@include transform(rotate(190deg));
+				}
+
+
 				div.foto-perfil{
 
 					width: 100%;
@@ -87,12 +121,13 @@
 						z-index: -1;
 						top: -10px;
 						left: -10px;
-						width: calc(100% + 20px);
-						height: calc(100% + 20px);
-						background-color: $amarelo-mto-claro;
-						-webkit-clip-path: polygon(40% 0, 100% 100%, 0% 60%);
-						clip-path: polygon(40% 0, 100% 100%, 0% 60%);
-
+						width: 90px;
+						height: 60px;
+						background-image: url(../media/sprites-triangulos2.svg);
+						background-repeat: no-repeat;
+						background-size: 200% auto;
+						background-position: 100% -60px;
+						@include transform(rotate(15deg));
 					}
 				}
 
@@ -412,6 +447,21 @@
 						font-size: 2em;
 						font-family: $fonte-titulo;
 						color: $rosa;
+					}
+
+					&:before{
+						content: '';
+						position: absolute;
+						z-index: -1;
+						top: 0px;
+						left: -10px;
+						width: 120px;
+						height: 80px;
+						background-image: url(../media/sprites-triangulos2.svg);
+						background-repeat: no-repeat;
+						background-size: 200% auto;
+						background-position: 100% -80px;
+						@include transform(rotate(180deg));
 					}
 				}
 			}

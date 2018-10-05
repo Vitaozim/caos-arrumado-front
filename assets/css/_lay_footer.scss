@@ -5,6 +5,9 @@
 	}
 
 	background-image: url(../media/caosarrumado-bg2.svg);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	#mapa-mundi{
 		margin-bottom: 2em;
 		@extend .container;
@@ -38,14 +41,15 @@
 					content: '';
 					position: absolute;
 					z-index: -1;
-					top: -10px;
-					left: 0px;
-					width: 100%;
-					height: calc(100% + 20px);
-					background-color: white;
-					-webkit-clip-path: polygon(10% 0%, 100% 45%, 0% 100%);
-					clip-path: polygon(10% 0%, 100% 45%, 0% 100%);
-
+					top: -20px;
+				    left: -17px;
+					width: 135px;
+					height: 90px;
+					background-image: url(../media/sprites-triangulos2.svg);
+					background-repeat: no-repeat;
+					background-size: 200% auto;
+					background-position: 100% 0px;
+					@include transform(rotate(-30deg));
 				}
 			}
 			img.aviao{
