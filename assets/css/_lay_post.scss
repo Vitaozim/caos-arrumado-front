@@ -1,6 +1,5 @@
 #area-post{
 	width: calc(100% - 300px - 2em);
-	background-color: white;
 	@media (max-width: $tamanho-tablet) {
 		width: calc(100% - 300px - 0.8em);
 	}
@@ -8,14 +7,36 @@
 		width: 100%;
 	}
 
+	.foto-de-capa{
+		width: 100%;
+		margin: 0;
+		height: 200px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+		img{
+			position: absolute;
+			height: 0;
+			width: 0;
+			top: 0;
+			right: 0;
+			opacity: 0;
+		}
+	}
+
 	article{
+		background-color: white;
+		padding-top: 2em;
 		margin-bottom: 2em;
+		position: relative;
 		& > *{
 			width: calc(100% - 100px);
 			margin: 0 auto;
 			@media (max-width: $tamanho-smartphone){
 				width: 100%;
-				margin: 0;
+				margin-right: 0;
+				margin-left: 0;
 			}
 			margin-bottom: 1em;
 			& + h3{
@@ -23,27 +44,101 @@
 			}
 
 		}
-
-		.foto-de-capa{
-			width: 100%;
+		h3.categoria{
+			@include transform(translateX(100%) rotate(90deg));
+			@include transform-origin(0% 100%);
 			margin: 0;
-			margin-bottom: 2em;
-			height: 200px;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
-			position: relative;
-			img{
-				position: absolute;
-				height: 0;
-				width: 0;
-				top: 0;
-				right: 0;
-				opacity: 0;
+			width: auto;
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0.5em;
+			font-family: $fonte-titulo;
+			font-weight: normal;
+			color: $rosa;
+			font-size: 2em;
+			@media (max-width: $tamanho-smartphone){
+				width: 100%;
+				font-size: 1.6em;
+				color: grey;
+				text-align: center;
+				@include transform(none);
+				position: static;
+				top: auto;
+				right: auto;
 			}
+
+		}
+
+		ul.redes-sociais{
+			width: auto;
+			margin: 0;
+			padding-top: 2em;
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include transform(translateX(-50%));
+			&.fixo{
+				position: fixed;
+				top: 2.5rem;
+				left: calc(50% - 560px);
+				@media (max-width: $tamanho-notebook){
+					left: 2em;
+				}
+			}
+
+			&.pos-fixado{
+				top: auto;
+				bottom: 0;
+			}
+			li{
+				width: 100%;
+				margin-bottom: 1em;
+				&:last-child{
+					margin-bottom: 0;
+				}
+				a{
+					font-size: 1em;
+					color: white;
+					box-shadow: none;
+					font-style: normal;
+				}
+			}
+
+			@media (max-width: $tamanho-notebook){
+				li{
+					a{
+						font-size: 0.8em;
+					}
+				}
+			}
+
+
+			@media (max-width: $tamanho-smartphone){
+				&, &.fixo, &.pos-fixado{
+					position: static;
+					top: auto;
+					left: auto;
+					width: auto;
+					padding: 1em 0;
+					@include transform(none);
+					@include display(flex);
+					@include justify-content(center);
+					li{
+						width: auto;
+						margin-bottom: 0;
+						margin-right: 1em;
+						&:last-child{
+							margin-right: 0;
+						}
+					}
+				}
+			}
+
 		}
 
 		h2{
+			margin: 0 auto;
 			margin-bottom: 0em;
 			text-align: center;
 			font-size: 2em;
@@ -100,6 +195,9 @@
 		margin: 0;
 		padding-right: 7em;
 		margin-bottom: 0.5em;
+		@media (max-width: $tamanho-smartphone){
+			padding-right: 0;
+		}
 		li{
 			display: inline-block;
 			margin-right: 0.4em;
@@ -157,7 +255,6 @@
 				line-height: 1;
 				margin: 0;
 				margin-right: 3em;
-				float: right;
 				font-size: 2em;
 				font-family: $fonte-titulo;
 			}
@@ -169,6 +266,28 @@
 				width: 5em;
 				height: 5em;
 				border: 5px solid white;
+			}
+		}
+
+		@media (max-width: $tamanho-smartphone){
+			@include flex-direction(column);
+			@include align-items(center);
+			a.n-comments{
+				@include order(2);
+			}
+			.nome-e-foto{
+				margin-bottom: 1em;
+				@include order(1);
+				@include display(flex);
+				@include align-items(center);
+				p.nome{
+					margin-right: 0.5em;
+				}
+				img.foto{
+					position: static;
+					bottom: auto;
+					right: auto;
+				}
 			}
 		}
 	}
@@ -193,8 +312,32 @@
 				}
 
 				p{
+					margin: 0;
+					line-height: 1.2;
 					color: $amarelo-escuro;
 					font-style: italic;
+				}
+			}
+		}
+
+		@media (max-width: $tamanho-smartphone){
+			@include display(block);
+			li{
+				width: 100%;
+				margin-bottom: 2em;
+				a{
+					img{
+						float: left;
+						width: auto;
+						width: 4em;
+						margin-right: 0.5em;
+						margin-bottom: 0.5em;
+					}
+					&:after{
+						content: '';
+						display: table;
+						clear: both;
+					}
 				}
 			}
 		}
@@ -263,10 +406,11 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		position: relative;
+		z-index: 1;
 		li{
-			display: block;
 			margin: 0;
-			margin-bottom: 1.5em;
+			margin-bottom: 2.5em;
 			width: 100%;
 			padding: 1em 1em 2em;
 			background-color: #fff;
@@ -279,20 +423,20 @@
 				position: absolute;
 				content: "";
 				display: block;
-				top: 10px;
-				left: 10px;
+				top: 6px;
+				left: 6px;
 				width: 100%;
 				height: 100%;
 				background-color: $amarelo;
-				// @include transform(rotate(3deg));
+				@include transform(rotate(0.75deg));
 			}
 
 			&:nth-child(even){
 
 				&:before{
-					top: -10px;
-					left: -10px;
-					// @include transform(rotate(-3deg));
+					top: -6px;
+					left: -6px;
+					@include transform(rotate(-0.75deg));
 				}
 
 				.nome-e-resposta{

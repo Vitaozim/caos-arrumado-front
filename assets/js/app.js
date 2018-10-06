@@ -120,6 +120,53 @@ jQuery(document).ready(function($) {
 		$(this).closest('.telas-pequenas').find('nav').toggleClass('db');;
 	});
 
+
+
+
+	// Redes sociais fixo
+	if ($('#area-post article').length > 0) {
+		var $articlePost = $('#area-post article');
+		var $redesSociaisPost = $articlePost.find('.redes-sociais');
+		var $menuglobal = $('#menuglobal');
+		var posicoesRedesFixas = {}
+
+		var attPosicoes = function(){
+			posicoesRedesFixas = {
+				comeco: 
+					$articlePost.offset().top
+					 - $menuglobal.height(),
+				fim: 
+					$articlePost.offset().top
+					 + $articlePost.height()
+					 - $redesSociaisPost.height() 
+					 - $menuglobal.height()
+			}
+		}
+
+		attPosicoes();
+
+		var timeOutAttPosicoes = setTimeout(function(){}, 0);
+
+		$(window).on('resize', function(event) {
+			clearTimeout(timeOutAttPosicoes);
+			var timeOutAttPosicoes = setTimeout(attPosicoes, 100);
+		});
+
+		$(window).on('scroll', function(event){
+			var scrollNovo = $('html').scrollTop();
+			if (scrollNovo >= posicoesRedesFixas.fim) {
+				$redesSociaisPost.addClass('pos-fixado').removeClass('fixo');
+			}
+			else if(scrollNovo >= posicoesRedesFixas.comeco){
+				$redesSociaisPost.addClass('fixo').removeClass('pos-fixado');
+			}
+			else{
+				$redesSociaisPost.removeClass('pos-fixado fixo');
+			}
+		})
+	}
+	
+
 });
 
 
