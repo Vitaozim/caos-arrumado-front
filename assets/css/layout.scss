@@ -8,6 +8,7 @@
 @import 'afcicons';
 @import 'padroes';
 
+@import 'lay_post';
 @import 'lay_components';
 @import 'lay_menuglobal';
 @import 'lay_insta';
@@ -20,7 +21,7 @@
 
 main{
 	width: 100%;
-	.posts-e-lateral{
+	.main-e-lateral{
 		margin-top: 7em;
 		@include display(flex);
 		@include justify-content(space-between);

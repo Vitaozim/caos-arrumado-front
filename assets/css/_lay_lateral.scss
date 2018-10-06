@@ -62,15 +62,15 @@
 					content: '';
 					position: absolute;
 					z-index: -1;
-					bottom: -11px;
-					right: -10px;
-					width: 90px;
-					height: 60px;
-					background-image: url(../media/sprites-triangulos2.svg);
-					background-repeat: no-repeat;
-					background-size: 200% auto;
-					background-position: 0px -62px;
-					@include transform(rotate(190deg));
+					bottom: -61px;
+				    right: -10px;
+				    width: 90px;
+				    height: 60px;
+				    background-image: url(../media/sprites-triangulos2.svg);
+				    background-repeat: no-repeat;
+				    background-size: 200% auto;
+				    background-position: 100% -124px;
+					@include transform(rotate(126deg));
 				}
 
 
@@ -222,17 +222,7 @@
 					&:focus{
 						outline: none;
 					}
-
-					&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-					  color: $amarelo-escuro;
-					}
-					&::-moz-placeholder { /* Firefox 19+ */
-					  color: $amarelo-escuro;
-					}
-					&:-ms-input-placeholder { /* IE 10+ */
-					  color: $amarelo-escuro;
-					}
-					&:-moz-placeholder { /* Firefox 18- */
+					@include placeholder{
 					  color: $amarelo-escuro;
 					}
 					
