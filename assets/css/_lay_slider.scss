@@ -12,6 +12,16 @@
 		position: relative;
 		width: 100%;
 	}
+
+	&.before-loading{
+		section:first-child{
+			display: block;
+		}
+
+		nav.bullets button:first-child{
+			background-color: $rosa;
+		}
+	}
 	section{
 		width: 100%;
 		overflow: hidden;

@@ -2337,6 +2337,10 @@ h1, h2, h3, h4, h5 {
     overflow: visible;
     position: relative;
     width: 100%; }
+  #slider-principal.before-loading section:first-child {
+    display: block; }
+  #slider-principal.before-loading nav.bullets button:first-child {
+    background-color: #E96576; }
   #slider-principal section {
     width: 100%;
     overflow: hidden;

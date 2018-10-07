@@ -35,6 +35,10 @@ jQuery(document).ready(function($) {
 		var $navNextPrev = $slider.find('.next-prev button');
 		var transitandoSlide = false;
 
+		$slides.eq(0).addClass('db atual');
+		$navBullets.eq(0).addClass('atual');
+		$slider.removeClass('before-loading');
+
 		var transitionendPrefixed = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 
 		var trocarSlider = function(futureSlide){
