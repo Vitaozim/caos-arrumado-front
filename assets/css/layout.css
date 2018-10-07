@@ -1065,7 +1065,9 @@ h1, h2, h3, h4, h5 {
           -webkit-order: 2;
           -moz-order: 2;
           order: 2;
-          -ms-flex-order: 2; }
+          -ms-flex-order: 2;
+          width: 100%;
+          text-align: center; }
         #area-post .bt-comment-e-autora .nome-e-foto {
           margin-bottom: 1em;
           -webkit-box-ordinal-group: 1;
@@ -1138,11 +1140,11 @@ h1, h2, h3, h4, h5 {
         display: block; }
         #area-post ul.relacionados li {
           width: 100%;
-          margin-bottom: 2em; }
+          margin-bottom: 1em; }
           #area-post ul.relacionados li a img {
             float: left;
             width: auto;
-            width: 4em;
+            width: 10em;
             margin-right: 0.5em;
             margin-bottom: 0.5em; }
           #area-post ul.relacionados li a:after {
@@ -1218,6 +1220,14 @@ h1, h2, h3, h4, h5 {
           font-weight: bold; }
           #area-post .caixa-comentario form.comentario .identificacao button:hover {
             background-color: #E96576; }
+      @media (max-width: 600px) {
+        #area-post .caixa-comentario form.comentario {
+          display: block; }
+          #area-post .caixa-comentario form.comentario textarea {
+            width: 100%;
+            height: 100px; }
+          #area-post .caixa-comentario form.comentario .identificacao {
+            width: 100%; } }
   #area-post .comentarios {
     list-style: none;
     margin: 0;
@@ -1273,6 +1283,18 @@ h1, h2, h3, h4, h5 {
         transform: rotate(-0.75deg); }
       #area-post .comentarios li:nth-child(even) .nome-e-resposta h2 {
         color: #bb7a12; }
+      #area-post .comentarios li a.bt-responder {
+        text-decoration: none;
+        display: inline-block;
+        background-color: #E96576;
+        background-image: -webkit-linear-gradient(left, #E96576, #F4CC8B);
+        background-image: linear-gradient(to right,#E96576, #F4CC8B);
+        padding: 4px;
+        color: white;
+        font-size: 0.7em;
+        line-height: 1;
+        text-transform: uppercase;
+        font-weight: bold; }
       #area-post .comentarios li .foto {
         display: -webkit-box;
         display: -moz-box;
@@ -1310,18 +1332,8 @@ h1, h2, h3, h4, h5 {
           height: 5em;
           border-radius: 50%;
           margin-bottom: 0.5em; }
-        #area-post .comentarios li .foto a {
-          text-decoration: none;
-          display: block;
-          background-color: #E96576;
-          background-image: -webkit-linear-gradient(left, #E96576, #F4CC8B);
-          background-image: linear-gradient(to right,#E96576, #F4CC8B);
-          padding: 4px;
-          color: white;
-          font-size: 0.7em;
-          line-height: 1;
-          text-transform: uppercase;
-          font-weight: bold; }
+        #area-post .comentarios li .foto a.bt-responder {
+          display: block; }
       #area-post .comentarios li .nome-e-resposta {
         width: 100%;
         padding-left: 2em; }
@@ -1337,6 +1349,15 @@ h1, h2, h3, h4, h5 {
           #area-post .comentarios li .nome-e-resposta p.data {
             font-size: 0.8em;
             margin-bottom: 1em; }
+        #area-post .comentarios li .nome-e-resposta a.bt-responder {
+          display: none; }
+      @media (max-width: 600px) {
+        #area-post .comentarios li {
+          display: block; }
+          #area-post .comentarios li .foto {
+            display: none; }
+          #area-post .comentarios li .nome-e-resposta a.bt-responder {
+            display: inline-block; } }
 
 /* CSS dos dois mapas interativos */
 .mapa-interativo {
