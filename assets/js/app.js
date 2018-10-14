@@ -128,8 +128,8 @@ jQuery(document).ready(function($) {
 
 
 	// Redes sociais fixo
-	if ($('#area-post article').length > 0) {
-		var $articlePost = $('#area-post article');
+	if ($('#area-post .area-content').length > 0) {
+		var $articlePost = $('#area-post .area-content');
 		var $redesSociaisPost = $articlePost.find('.redes-sociais');
 		var $menuglobal = $('#menuglobal');
 		var posicoesRedesFixas = {}
@@ -145,19 +145,29 @@ jQuery(document).ready(function($) {
 					 - $redesSociaisPost.height() 
 					 - $menuglobal.height()
 			}
+			// console.log(posicoesRedesFixas);
 		}
 
 		attPosicoes();
+
+		var timerAttPosicoes = setInterval(attPosicoes, 3000);
 
 		var timeOutAttPosicoes = setTimeout(function(){}, 0);
 
 		$(window).on('resize', function(event) {
 			clearTimeout(timeOutAttPosicoes);
-			var timeOutAttPosicoes = setTimeout(attPosicoes, 100);
+			timeOutAttPosicoes = setTimeout(attPosicoes, 200);
 		});
 
+
 		$(window).on('scroll', function(event){
-			var scrollNovo = $('html').scrollTop();
+			
+			var scrollNovo = $(window).scrollTop();
+			// console.log(
+			// 	$(window).scrollTop(),
+			// 	$('html').scrollTop(),
+			// 	$('body').scrollTop()
+			// 	);
 			if (scrollNovo >= posicoesRedesFixas.fim) {
 				$redesSociaisPost.addClass('pos-fixado').removeClass('fixo');
 			}
