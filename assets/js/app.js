@@ -3,25 +3,27 @@ jQuery(document).ready(function($) {
 
 
 	// Masonry
-	var $lista_mainposts = $('#primeiros-posts > ul');
-	var $lista_pinterest = $('#lateral aside.pinterest ul');
+	var $lista_masonry = $('#primeiros-posts > ul, #lateral aside.pinterest ul');
 
-	if ($lista_mainposts.length > 0) {
-		$lista_mainposts.masonry({
+	if ($lista_masonry.length > 0) {
+		var masonryArgs = {
 			itemSelector: '.grid-item',
 			columnWidth: '.grid-sizer',
 			gutter: '.gutter-sizer',
 			percentPosition: true
+		};
+		$lista_masonry.each(function(index, el) {
+			var $thisMasonry = $(el);
+			$thisMasonry.masonry(masonryArgs);
+			$thisMasonry.find('img').each(function(index, el) {
+				$(el).on('load', function(event) {
+					console.log('imagem do masonry carregou');
+					$thisMasonry.masonry('layout');
+				});
+			});
 		});
 	}
 
-	if ($lista_pinterest.length > 0) {
-		$lista_pinterest.masonry({
-			itemSelector: '.grid-item',
-			gutter: '.gutter-sizer',
-			percentPosition: true
-		});
-	}
 
 
 

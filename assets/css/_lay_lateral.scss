@@ -349,16 +349,16 @@
 				list-style: none;
 				padding: 0;
 				margin: 0;
-				$gutter: 8px;
+				$gutter: 9px;
 				div.gutter-sizer{
 					width: $gutter;
 				}
 
 				div.grid-sizer{
-					width: calc(33.33333% - #{$gutter});
+					width: calc(33.33333% - #{$gutter * 2 / 3});
 				}
 				li.grid-item{
-					width: calc(33.33333% - #{$gutter});
+					width: calc(33.33333% - #{$gutter * 2 / 3});
 					margin-bottom: $gutter;
 					a{
 						display: block;
